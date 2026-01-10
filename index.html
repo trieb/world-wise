@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Countries of the World!</title>
+  <style>
+    :root{
+      --bg:#0b1020;--muted:#9fb0ff;--text:#eef2ff;--line:rgba(255,255,255,.12);
+      --good:#39d98a;--bad:#ff5c7a;--btn:rgba(255,255,255,.10);--btnHover:rgba(255,255,255,.16);
+      --shadow:0 12px 34px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:radial-gradient(1200px 600px at 20% -10%, rgba(127,156,255,.25), transparent 60%),
+                 radial-gradient(900px 500px at 90% 0%, rgba(255,92,122,.18), transparent 55%),
+                 var(--bg);
+      color:var(--text);min-height:100vh;display:grid;place-items:center;padding:24px
+    }
+    .app{width:min(980px,100%);display:grid;gap:16px}
+    header{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    header h1{font-size:18px;margin:0;letter-spacing:.2px}
+    header .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:13px}
+    .pill{border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.05)}
+    .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden
+    }
+    .card .content{padding:16px}
+    .card h2{margin:0 0 10px 0;font-size:15px;color:var(--muted);font-weight:650;letter-spacing:.15px}
+    .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .spacer{flex:1}
+    button,input,textarea{font:inherit;color:inherit}
+    button{
+      cursor:pointer;border:1px solid var(--line);background:var(--btn);
+      padding:10px 12px;border-radius:12px;transition:120ms ease;user-select:none
+    }
+    button:hover{background:var(--btnHover)}
+    button:active{transform:translateY(1px)}
+    button.primary{background:rgba(127,156,255,.22);border-color:rgba(127,156,255,.35)}
+    button.danger{background:rgba(255,92,122,.16);border-color:rgba(255,92,122,.28)}
+    button.good{background:rgba(57,217,138,.16);border-color:rgba(57,217,138,.28)}
+    input[type="text"]{
+      width:min(520px,100%);border:1px solid var(--line);background:rgba(0,0,0,.15);
+      padding:10px 12px;border-radius:12px;outline:none
+    }
+    input[type="text"]:focus{border-color:rgba(127,156,255,.55);box-shadow:0 0 0 3px rgba(127,156,255,.14)}
+    textarea{
+      width:100%;min-height:160px;border:1px solid var(--line);background:rgba(0,0,0,.15);
+      padding:10px 12px;border-radius:12px;outline:none;resize:vertical
+    }
+    .prompt{display:grid;gap:12px}
+    .question{font-size:18px;line-height:1.25;font-weight:700;letter-spacing:.1px}
+    .sub{color:var(--muted);font-size:13px}
+    .flagWrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .flagBox{
+      width:240px;max-width:100%;height:150px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(0,0,0,.20);display:grid;place-items:center;overflow:hidden
+    }
+    
+
+    .flagBox {
+  width: 240px;
+  max-width: 100%;
+  min-height: 150px;      /* was fixed height */
+  height: auto;           /* allow growth */
+  padding: 8px;           /* give the image breathing room */
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(0,0,0,0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;      /* IMPORTANT */
+}
+
+.flagBox img {
+  max-width: 100%;
+  max-height: 140px;      /* prevents overflow */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+	
+	
+	.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}
+    @media (max-width:560px){.choices{grid-template-columns:1fr}.flagBox{width:100%;height:160px}}
+    .choiceBtn{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;text-align:left;min-height:64px}
+    .choiceBtn img{width:56px;height:36px;object-fit:contain;border-radius:6px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.10)}
+    .choiceBtn .label{font-weight:650;line-height:1.15}
+    .choiceBtn .tiny{color:var(--muted);font-size:12px;margin-top:2px}
+    .result{border-top:1px solid var(--line);padding:12px 16px;background:rgba(0,0,0,.12);display:none}
+    .result.show{display:block}
+    .result.good{color:var(--good)}
+    .result.bad{color:var(--bad)}
+    .setup{display:none}
+    .setup.show{display:block}
+    .smallNote{color:var(--muted);font-size:12px;line-height:1.4}
+    .modeTag{
+      display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.05);color:var(--muted);font-size:12px;width:fit-content
+    }
+    .kbd{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+      border:1px solid var(--line);background:rgba(0,0,0,.20);padding:2px 6px;border-radius:8px;font-size:12px;color:var(--text)
+    }
+    .warn{color:#ffd18a}
+	
+	.hints {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: rgba(0,0,0,0.12);
+}
+
+.hints.show { display: block; }
+
+.hintGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (max-width: 560px) {
+  .hintGrid { grid-template-columns: 1fr; }
+}
+
+.hintChip {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.06);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 650;
+  text-align: center;
+  user-select: none;
+}
+
+	
+	
+  </style>
+</head>
+
+<body>
+<div class="app">
+  <header>
+    <h1>Countries of the World!</h1>
+    <div class="meta">
+      <span class="pill">Mode: <strong id="modeName">—</strong></span>
+      <span class="pill">Score: <strong id="score">0</strong></span>
+      <span class="pill">Streak: <strong id="streak">0</strong></span>
+      <span class="pill">Progress: <strong id="progress">0</strong></span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <div class="content">
+        <h2>Game</h2>
+        <div class="prompt" id="prompt"></div>
+
+        <div class="row" style="margin-top:12px;">
+          <button class="primary" id="btnNext">Next</button>
+          <button id="btnSkip">Skip</button>
+          <div class="spacer"></div>
+          <button class="danger" id="btnReset">Reset</button>
+        </div>
+
+        <div class="result" id="result"></div>
+      </div>
+    </section>
+
+    <aside class="card">
+      <div class="content">
+        <h2>Data & Settings</h2>
+
+        <div class="row">
+          <button id="btnToggleSetup">Setup / Import</button>
+          <button id="btnShuffle" class="good">Shuffle</button>
+        </div>
+
+        <div class="smallNote" style="margin-top:10px;">
+          This version loads <span class="kbd">flags_manifest.json</span> as a <b>single object</b>:
+          <pre class="smallNote" style="white-space:pre-wrap;margin:8px 0 0 0;">{
+  "Sweden": { "capital":"Stockholm", "normal_flag":"/flags/normal/sw-flag.gif", "small_flag":"/flags/small/tn_sw-flag.gif" }
+}</pre>
+          Put it in the <b>root folder</b> next to this HTML file.
+          <div style="margin-top:6px;">Run with a server: <span class="kbd">python -m http.server 8000</span></div>
+        </div>
+
+        <div class="setup" id="setup" style="margin-top:14px;">
+          <div class="smallNote">
+            If fetch fails (file missing or you opened with <span class="kbd">file://</span>),
+            paste the JSON content here and click <b>Use pasted JSON</b>.
+          </div>
+
+          <div style="margin-top:10px;">
+            <div class="smallNote">Paste full <span class="kbd">flags_manifest.json</span> content:</div>
+            <textarea id="manifestInput" placeholder='{"Andorra":{"capital":"Andorra la Vella","normal_flag":"/flags/normal/an-flag.gif","small_flag":"/flags/small/tn_an-flag.gif"}}'></textarea>
+          </div>
+
+          <div class="row" style="margin-top:10px;">
+            <button class="primary" id="btnUsePasted">Use pasted JSON</button>
+            <button id="btnClearLocal">Clear local data</button>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;" />
+
+        <div class="smallNote">
+          Shortcuts: <span class="kbd">Enter</span> submit (text modes), <span class="kbd">N</span> next, <span class="kbd">S</span> skip.
+        </div>
+
+        <div class="smallNote warn" id="dataWarning" style="margin-top:10px; display:none;"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+(() => {
+	const SHOW_SETTINGS_PANEL = false;
+
+  const $ = (sel) => document.querySelector(sel);
+
+  function normalizeAnswer(s) {
+    return (s ?? "")
+      .toString()
+      .trim()
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[_]/g, " ")
+      .replace(/[’']/g, "")
+      .replace(/[^a-z0-9\s\-]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function uniqBy(arr, keyFn) {
+    const seen = new Set();
+    const out = [];
+    for (const x of arr) {
+      const k = keyFn(x);
+      if (!seen.has(k)) {
+        seen.add(k);
+        out.push(x);
+      }
+    }
+    return out;
+  }
+
+  function ensureLeadingSlash(path) {
+    if (!path) return "";
+    return path.startsWith("/") ? path : ("/" + path);
+  }
+
+  function bestFlagPath(item) {
+    return item.normal_flag || item.small_flag || "";
+  }
+
+  // UI
+  const elModeName = $("#modeName");
+  const elScore = $("#score");
+  const elStreak = $("#streak");
+  const elProgress = $("#progress");
+  const elPrompt = $("#prompt");
+  const elResult = $("#result");
+  const elDataWarning = $("#dataWarning");
+
+  const btnNext = $("#btnNext");
+  const btnSkip = $("#btnSkip");
+  const btnReset = $("#btnReset");
+  const btnShuffle = $("#btnShuffle");
+  const btnToggleSetup = $("#btnToggleSetup");
+  const setup = $("#setup");
+  const manifestInput = $("#manifestInput");
+  const btnUsePasted = $("#btnUsePasted");
+  const btnClearLocal = $("#btnClearLocal");
+
+  // State
+  const state = {
+    items: [], // {country, capital, normal_flag, small_flag}
+    score: 0,
+    streak: 0,
+    progress: 0,
+    current: null,
+    locked: false,
+  };
+
+  const MODES = [
+    { id: 1, name: "Flag → Country" },
+    { id: 2, name: "Country → Flag (4 choices)" },
+    { id: 3, name: "Country → Capital" },
+    { id: 4, name: "Capital → Country" },
+  ];
+
+  function setHud() {
+    elScore.textContent = String(state.score);
+    elStreak.textContent = String(state.streak);
+    elProgress.textContent = String(state.progress);
+  }
+
+  function showResult(ok, msg) {
+    elResult.className = "result show " + (ok ? "good" : "bad");
+    elResult.textContent = msg;
+  }
+
+  function clearResult() {
+    elResult.className = "result";
+    elResult.textContent = "";
+  }
+
+  function toggleSetup() {
+    setup.classList.toggle("show");
+  }
+
+  // ---- NEW manifest parser (single object) ----
+  function parseManifestObject(data) {
+    // Expected:
+    // {
+    //   "Andorra": { "capital":"...", "normal_flag":"...", "small_flag":"..." },
+    //   ...
+    // }
+    if (!data || typeof data !== "object" || Array.isArray(data)) return [];
+
+    const out = [];
+    for (const [country, obj] of Object.entries(data)) {
+      if (!country || !obj || typeof obj !== "object") continue;
+
+      const capital = (obj.capital ?? "").toString().trim() || "UnknownCapital";
+      const normal_flag = ensureLeadingSlash((obj.normal_flag ?? "").toString().trim());
+      const small_flag = ensureLeadingSlash((obj.small_flag ?? "").toString().trim());
+
+      out.push({
+        country: country.trim(),
+        capital,
+        normal_flag,
+        small_flag,
+      });
+    }
+
+    const dedup = uniqBy(out, x => normalizeAnswer(x.country));
+    dedup.sort((a,b) => a.country.localeCompare(b.country));
+    return dedup;
+  }
+
+  async function tryLoadManifest() {
+    // 1) root file
+    try {
+      const r = await fetch("flags_manifest.json", { cache: "no-store" });
+      if (r.ok) return await r.json();
+    } catch (_) {}
+
+    // 2) localStorage fallback
+    const ls = localStorage.getItem("flags_manifest_object_json");
+    if (ls) {
+      try { return JSON.parse(ls); } catch (_) {}
+    }
+    return null;
+  }
+
+  function setItemsFromManifestObject(data) {
+    const items = parseManifestObject(data);
+    state.items = items;
+
+    const missing = items.filter(it => !bestFlagPath(it)).length;
+    if (items.length && missing) {
+      elDataWarning.style.display = "block";
+      elDataWarning.textContent = `Warning: ${missing} entries have no flag paths (normal_flag/small_flag missing).`;
+    } else {
+      elDataWarning.style.display = "none";
+      elDataWarning.textContent = "";
+    }
+    return items.length;
+  }
+
+  function usePastedJson() {
+    const raw = manifestInput.value.trim();
+    if (!raw) return;
+    try {
+      const data = JSON.parse(raw);
+      localStorage.setItem("flags_manifest_object_json", JSON.stringify(data));
+      const count = setItemsFromManifestObject(data);
+      alert(`Loaded ${count} countries from pasted JSON.`);
+      resetGame();
+    } catch (e) {
+      alert("Invalid JSON. Paste the full flags_manifest.json content (single object).");
+    }
+  }
+
+  function clearLocal() {
+    localStorage.removeItem("flags_manifest_object_json");
+    alert("Cleared local (browser) manifest. Reload to try flags_manifest.json from the server again.");
+  }
+
+  // Game utils
+  function pickRandomItem(except = null) {
+    if (!state.items.length) return null;
+    if (state.items.length === 1) return state.items[0];
+
+    let tries = 0;
+    while (tries++ < 12) {
+      const it = state.items[Math.floor(Math.random() * state.items.length)];
+      if (!except) return it;
+      if (normalizeAnswer(it.country) !== normalizeAnswer(except.country)) return it;
+    }
+    return state.items[Math.floor(Math.random() * state.items.length)];
+  }
+
+  function pickMode() {
+    return MODES[Math.floor(Math.random() * MODES.length)];
+  }
+
+  function buildChoices(correctItem, count = 4) {
+    const choices = [correctItem];
+    while (choices.length < count) {
+      const it = pickRandomItem();
+      if (!it) break;
+      const exists = choices.some(x => normalizeAnswer(x.country) === normalizeAnswer(it.country));
+      if (!exists) choices.push(it);
+    }
+    return shuffle(choices);
+  }
+
+  function wireTextSubmit(q, expect) {
+    const input = $("#answerInput");
+    const btn = $("#btnSubmit");
+
+    const submit = () => {
+      if (state.locked) return;
+
+      const user = normalizeAnswer(input.value);
+      const correct = normalizeAnswer(expect === "country" ? q.item.country : q.item.capital);
+
+      const ok = user === correct;
+      state.locked = true;
+      state.progress += 1;
+
+      if (ok) {
+        state.score += 1;
+        state.streak += 1;
+        showResult(true, `✅ Correct! ${q.item.country} — ${q.item.capital}`);
+      } else {
+        state.streak = 0;
+        showResult(false, `❌ Not quite. Correct: ${q.item.country} — ${q.item.capital}`);
+      }
+      setHud();
+    };
+
+    btn.addEventListener("click", submit);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") submit();
+    });
+  }
+
+  function wireChoices(q) {
+    const wrap = $("#choices");
+    wrap.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-idx]");
+      if (!btn || state.locked) return;
+
+      const idx = Number(btn.getAttribute("data-idx"));
+      const chosen = q.choices[idx];
+
+      const ok = normalizeAnswer(chosen.country) === normalizeAnswer(q.item.country);
+
+      state.locked = true;
+      state.progress += 1;
+
+      [...wrap.querySelectorAll("button[data-idx]")].forEach((b) => {
+  const j = Number(b.getAttribute("data-idx"));
+  const it = q.choices[j];
+  const isCorrect = normalizeAnswer(it.country) === normalizeAnswer(q.item.country);
+  const isChosen = j === idx;
+
+  b.classList.remove("good", "danger");
+
+  if (isCorrect) {
+    b.classList.add("good");
+  } else if (isChosen) {
+    b.classList.add("danger");
+  }
+});
+
+
+      if (ok) {
+        state.score += 1;
+        state.streak += 1;
+        showResult(true, `✅ Correct! ${q.item.country} (Capital: ${q.item.capital}).`);
+      } else {
+        state.streak = 0;
+        showResult(false, `❌ Nope. Correct flag: ${q.item.country} (Capital: ${q.item.capital}).`);
+      }
+      setHud();
+    });
+  }
+
+  function renderQuestion(q) {
+    state.locked = false;
+    clearResult();
+    elModeName.textContent = q.mode.name;
+
+    const flagPath = bestFlagPath(q.item);
+
+    if (q.mode.id === 1) {
+      elPrompt.innerHTML = `
+        <div class="modeTag">1) Given a flag, name the country</div>
+        <div class="flagWrap">
+          <div class="flagBox"><img src="${flagPath}" alt="Flag"></div>
+          <div style="flex:1;min-width:240px;">
+            <div class="question">Which country is this?</div>
+            <div class="sub">Type the country name and press <span class="kbd">Enter</span>.</div>
+            
+			<div class="row" style="margin-top: 10px;">
+  <input id="answerInput" type="text" placeholder="Country name…" autocomplete="off" />
+  <button class="primary" id="btnSubmit">Submit</button>
+  <button id="btnHelp">Help</button>
+</div>
+
+<div class="hints" id="hintBox">
+  <div class="sub">Pick one (but you still must type the answer):</div>
+  <div class="hintGrid" id="hintGrid"></div>
+</div>
+
+			
+            <div class="smallNote" style="margin-top:10px;">Case-insensitive; ignores accents.</div>
+          </div>
+        </div>
+      `;
+      wireTextSubmit(q, "country");
+	  wireHintButton({ type: "country", item: q.item });
+    }
+
+    if (q.mode.id === 2) {
+      const buttons = q.choices.map((it, idx) => {
+      const p = bestFlagPath(it);
+      return `
+         <button class="choiceBtn" data-idx="${idx}" title="Select this flag">
+            <img src="${p}" alt="flag option">
+         </button>
+         `;
+      }).join("");
+
+
+      elPrompt.innerHTML = `
+        <div class="modeTag">2) Given a country, select the correct flag</div>
+        <div class="question">Select the flag for: <span style="color:#cdd6ff">${q.item.country}</span></div>
+        <div class="sub">One is correct. Three are decoys.</div>
+        <div class="choices" id="choices">${buttons}</div>
+      `;
+      wireChoices(q);
+    }
+
+    if (q.mode.id === 3) {
+      elPrompt.innerHTML = `
+        <div class="modeTag">3) Given a country, name the capital</div>
+        <div class="question">What is the capital of <span style="color:#cdd6ff">${q.item.country}</span>?</div>
+        <div class="sub">Type the capital and press <span class="kbd">Enter</span>.</div>
+        
+		<div class="row" style="margin-top: 10px;">
+  <input id="answerInput" type="text" placeholder="Country name…" autocomplete="off" />
+  <button class="primary" id="btnSubmit">Submit</button>
+  <button id="btnHelp">Help</button>
+</div>
+
+<div class="hints" id="hintBox">
+  <div class="sub">Pick one (but you still must type the answer):</div>
+  <div class="hintGrid" id="hintGrid"></div>
+</div>
+
+		
+        <div class="smallNote" style="margin-top:10px;">(Optional hint) The flag is shown below.</div>
+        <div class="flagBox" style="width:100%;height:120px;margin-top:10px;">
+          <img src="${flagPath}" alt="Flag">
+        </div>
+      `;
+      wireTextSubmit(q, "capital");
+	  wireHintButton({ type: "capital", item: q.item });
+
+    }
+
+    if (q.mode.id === 4) {
+      elPrompt.innerHTML = `
+        <div class="modeTag">4) Given a capital, name the country</div>
+        <div class="question">Which country has the capital <span style="color:#cdd6ff">${q.item.capital}</span>?</div>
+        <div class="sub">Type the country and press <span class="kbd">Enter</span>.</div>
+        
+		<div class="row" style="margin-top: 10px;">
+  <input id="answerInput" type="text" placeholder="Country name…" autocomplete="off" />
+  <button class="primary" id="btnSubmit">Submit</button>
+  <button id="btnHelp">Help</button>
+</div>
+
+<div class="hints" id="hintBox">
+  <div class="sub">Pick one (but you still must type the answer):</div>
+  <div class="hintGrid" id="hintGrid"></div>
+</div>
+
+      `;
+      wireTextSubmit(q, "country");
+	  wireHintButton({ type: "country", item: q.item });
+
+    }
+
+    const input = $("#answerInput");
+    if (input) setTimeout(() => input.focus(), 50);
+  }
+
+  function nextQuestion() {
+    if (!state.items.length) {
+      elPrompt.innerHTML = `
+        <div class="question">No data loaded yet.</div>
+        <div class="sub">
+          Put <span class="kbd">flags_manifest.json</span> in the root folder and serve via
+          <span class="kbd">python -m http.server</span>, or use Setup / Import to paste JSON.
+        </div>
+      `;
+      elModeName.textContent = "—";
+      return;
+    }
+
+    // Ensure mode 1 has a usable flag; if not, re-pick a few times
+    let mode = pickMode();
+    let item = pickRandomItem();
+    if (mode.id === 1 || mode.id === 3) {
+      let tries = 0;
+      while (tries++ < 10 && item && !bestFlagPath(item)) item = pickRandomItem(item);
+    }
+
+    const q = { mode, item, choices: null };
+    if (mode.id === 2) q.choices = buildChoices(item, 4);
+
+    state.current = q;
+    renderQuestion(q);
+  }
+
+  function resetGame() {
+    state.score = 0;
+    state.streak = 0;
+    state.progress = 0;
+    state.locked = false;
+    clearResult();
+    setHud();
+    nextQuestion();
+  }
+  
+  function pickDecoys({ type, correctValue, count }) {
+  // type: "country" | "capital"
+  const seen = new Set();
+  const pool = [];
+
+  for (const it of state.items) {
+    const v = (type === "country" ? it.country : it.capital) || "";
+    const norm = normalizeAnswer(v);
+    if (!norm) continue;
+    if (norm === normalizeAnswer(correctValue)) continue;
+    if (seen.has(norm)) continue;
+    seen.add(norm);
+    pool.push(v);
+  }
+
+  shuffle(pool);
+  return pool.slice(0, count);
+}
+
+function buildHintOptions({ type, item }) {
+  const correctValue = type === "country" ? item.country : item.capital;
+  const decoys = pickDecoys({ type, correctValue, count: 3 });
+  const options = shuffle([correctValue, ...decoys]);
+
+  // If dataset is small, we might not get 3 decoys
+  return options;
+}
+
+function wireHintButton({ type, item }) {
+  const btn = document.querySelector("#btnHelp");
+  const box = document.querySelector("#hintBox");
+  const grid = document.querySelector("#hintGrid");
+  if (!btn || !box || !grid) return;
+
+  // Build once per question
+  const options = buildHintOptions({ type, item });
+  grid.innerHTML = options.map(opt => `<div class="hintChip">${opt}</div>`).join("");
+
+  btn.addEventListener("click", () => {
+    box.classList.toggle("show");
+    // no autofill; just visual help
+  });
+}
+
+  
+  
+  if (!SHOW_SETTINGS_PANEL) {
+  const sidebar = document.querySelector("aside.card");
+  if (sidebar) sidebar.style.display = "none";
+
+  const grid = document.querySelector(".grid");
+  if (grid) grid.style.gridTemplateColumns = "1fr";
+}
+
+  
+
+  // Init
+  async function init() {
+    setHud();
+
+    btnNext.addEventListener("click", nextQuestion);
+    btnSkip.addEventListener("click", () => {
+      if (!state.items.length) return;
+      state.streak = 0;
+      state.progress += 1;
+      setHud();
+      showResult(false, `⏭️ Skipped. Answer was: ${state.current?.item?.country ?? "—"} — ${state.current?.item?.capital ?? "—"}`);
+      state.locked = true;
+    });
+    btnReset.addEventListener("click", resetGame);
+    btnShuffle.addEventListener("click", () => {
+      state.items = shuffle(state.items);
+      showResult(true, "🔀 Shuffled question pool.");
+    });
+
+    btnToggleSetup.addEventListener("click", toggleSetup);
+    btnUsePasted.addEventListener("click", usePastedJson);
+    btnClearLocal.addEventListener("click", clearLocal);
+
+    window.addEventListener("keydown", (e) => {
+  // Don’t trigger shortcuts while typing in inputs/textareas,
+  // except allow Help if user presses Ctrl+H (optional).
+  const isTyping = e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA");
+
+  const k = e.key.toLowerCase();
+
+  if (!isTyping) {
+    if (k === "n") nextQuestion();
+    if (k === "s") btnSkip.click();
+    if (k === "h") {
+      const helpBtn = document.querySelector("#btnHelp");
+      if (helpBtn) helpBtn.click();
+    }
+  } else {
+    // Optional: allow Ctrl+H to toggle help while cursor is in the input
+    if ((e.ctrlKey || e.metaKey) && k === "h") {
+      e.preventDefault();
+      const helpBtn = document.querySelector("#btnHelp");
+      if (helpBtn) helpBtn.click();
+    }
+  }
+});
+
+
+    const manifest = await tryLoadManifest();
+    if (manifest) {
+      const count = setItemsFromManifestObject(manifest);
+      if (count) resetGame();
+      else setup.classList.add("show");
+    } else {
+      setup.classList.add("show");
+      nextQuestion();
+    }
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
