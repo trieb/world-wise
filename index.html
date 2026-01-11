@@ -516,12 +516,14 @@
     elModeName.textContent = q.mode.name;
 
     const flagPath = bestFlagPath(q.item);
+    const resolvedFlagPath = new URL(flagPath, document.baseURI).href;
+
 
     if (q.mode.id === 1) {
       elPrompt.innerHTML = `
         <div class="modeTag">1) Given a flag, name the country</div>
         <div class="flagWrap">
-          <div class="flagBox"><img src="${flagPath}" alt="Flag"></div>
+          <div class="flagBox"><img src="${resolvedFlagPath}" alt="Flag"></div>
           <div style="flex:1;min-width:240px;">
             <div class="question">Which country is this?</div>
             <div class="sub">Type the country name and press <span class="kbd">Enter</span>.</div>
