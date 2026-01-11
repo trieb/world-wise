@@ -516,8 +516,11 @@
     elModeName.textContent = q.mode.name;
 
     const flagPath = bestFlagPath(q.item);
-    const resolvedFlagPath = new URL(flagPath, document.baseURI).href;
-	console.log("resolvedFlagPath", resolvedFlagPath);
+    console.log("flagPath", flagPath);
+
+    const normalizedFlagPath = flagPath.replace(/^\//, "");
+    const resolvedFlagPath = new URL(normalizedFlagPath, document.baseURI).href;
+    console.log("resolvedFlagPath", resolvedFlagPath);
 
 
     if (q.mode.id === 1) {
