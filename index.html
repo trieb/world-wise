@@ -555,9 +555,17 @@
     if (q.mode.id === 2) {
       const buttons = q.choices.map((it, idx) => {
       const p = bestFlagPath(it);
+	  
+	  // Fix image path: 
+      console.log("flagPath", p);
+      normalized_p = p.replace(/^\//, "");
+      resolved_p = new URL(normalized_p, document.baseURI).href;
+      console.log("resolved_p", resolved_p);
+	  
+	  
       return `
          <button class="choiceBtn" data-idx="${idx}" title="Select this flag">
-            <img src="${p}" alt="flag option">
+            <img src="${resolved_p}" alt="flag option">
          </button>
          `;
       }).join("");
