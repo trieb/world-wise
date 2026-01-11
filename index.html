@@ -517,6 +517,7 @@
 
     const flagPath = bestFlagPath(q.item);
     const resolvedFlagPath = new URL(flagPath, document.baseURI).href;
+	console.log("resolvedFlagPath", resolvedFlagPath);
 
 
     if (q.mode.id === 1) {
