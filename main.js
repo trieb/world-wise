@@ -233,13 +233,13 @@
   function renderQuestion(q) {
     state.locked = false;
     clearResult();
-    elModeName.textContent = q.mode.name;
+    //elModeName.textContent = q.mode.name;
     const flagPath = bestFlagPath(q.item);
     const normalizedFlagPath = flagPath.replace(/^\//, "");
     const resolvedFlagPath = new URL(normalizedFlagPath, document.baseURI).href;
     if (q.mode.id === 1) {
       elPrompt.innerHTML = `
-        <div class=\"modeTag\">1) Given a flag, name the country</div>
+        <!--<div class=\"modeTag\">1) Given a flag, name the country</div>-->
         <div class=\"flagWrap\">
           <div class=\"flagBox\"><img src=\"${resolvedFlagPath}\" alt=\"Flag\"></div>
           <div style=\"flex:1;min-width:240px;\">
@@ -251,7 +251,7 @@
               <button id=\"btnHelp\">Help</button>
             </div>
             <div class=\"hints\" id=\"hintBox\">
-              <div class=\"sub\">Pick one (but you still must type the answer):</div>
+              <div class=\"sub\">Pick one:</div>
               <div class=\"hintGrid\" id=\"hintGrid\"></div>
             </div>
             <div class=\"smallNote\" style=\"margin-top:10px;\">Case-insensitive; ignores accents.</div>
@@ -273,7 +273,7 @@
         `;
       }).join("");
       elPrompt.innerHTML = `
-        <div class=\"modeTag\">2) Given a country, select the correct flag</div>
+        <!--<div class=\"modeTag\">2) Given a country, select the correct flag</div>-->
         <div class=\"question\">Select the flag for: <span style=\"color:#cdd6ff\">${q.item.country}</span></div>
         <div class=\"sub\">One is correct. Three are decoys.</div>
         <div class=\"choices\" id=\"choices\">${buttons}</div>
@@ -282,7 +282,7 @@
     }
     if (q.mode.id === 3) {
       elPrompt.innerHTML = `
-        <div class=\"modeTag\">3) Given a country, name the capital</div>
+        <!--<div class=\"modeTag\">3) Given a country, name the capital</div>-->
         <div class=\"question\">What is the capital of <span style=\"color:#cdd6ff\">${q.item.country}</span>?</div>
         <div class=\"sub\">Type the capital and press <span class=\"kbd\">Enter</span>.</div>
         <div class=\"row\" style=\"margin-top: 10px;\">
@@ -304,7 +304,7 @@
     }
     if (q.mode.id === 4) {
       elPrompt.innerHTML = `
-        <div class=\"modeTag\">4) Given a capital, name the country</div>
+        <!--<div class=\"modeTag\">4) Given a capital, name the country</div>-->
         <div class=\"question\">Which country has the capital <span style=\"color:#cdd6ff\">${q.item.capital}</span>?</div>
         <div class=\"sub\">Type the country and press <span class=\"kbd\">Enter</span>.</div>
         <div class=\"row\" style=\"margin-top: 10px;\">
@@ -382,9 +382,20 @@
     const grid = document.querySelector("#hintGrid");
     if (!btn || !box || !grid) return;
     const options = buildHintOptions({ type, item });
-    grid.innerHTML = options.map(opt => `<div class=\"hintChip\">${opt}</div>`).join("");
+    grid.innerHTML = options.map(opt => `<button class=\"hintChip\" type=\"button\">${opt}</button>`).join("");
     btn.addEventListener("click", () => {
       box.classList.toggle("show");
+    });
+    // Enable clicking a hint to fill and submit
+    grid.querySelectorAll(".hintChip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const input = document.querySelector("#answerInput");
+        if (input) {
+          input.value = chip.textContent;
+          const submitBtn = document.querySelector("#btnSubmit");
+          if (submitBtn) submitBtn.click();
+        }
+      });
     });
   }
   if (!SHOW_SETTINGS_PANEL) {
