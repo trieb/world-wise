@@ -139,8 +139,8 @@
     "normal_flag": "flags/normal/by-flag.gif",
     "small_flag": "flags/small/tn_by-flag.gif"
   },
-  "Cabo Verde": {
-    "capital": "UnknownCapital",
+  "Cape Verde": {
+    "capital": "Praia",
     "normal_flag": "flags/normal/cv-flag.gif",
     "small_flag": "flags/small/tn_cv-flag.gif"
   },
@@ -719,8 +719,8 @@
     "normal_flag": "flags/normal/rw-flag.gif",
     "small_flag": "flags/small/tn_rw-flag.gif"
   },
-  "Saint Kitts &#38; Nevis": {
-    "capital": "UnknownCapital",
+  "Saint Kitts & Nevis": {
+    "capital": "Basseterre",
     "normal_flag": "flags/normal/sc-flag.gif",
     "small_flag": "flags/small/tn_sc-flag.gif"
   },
@@ -739,8 +739,8 @@
     "normal_flag": "flags/normal/sm-flag.gif",
     "small_flag": "flags/small/tn_sm-flag.gif"
   },
-  "Sao Tome &#38; Principe": {
-    "capital": "UnknownCapital",
+  "Sao Tome & Principe": {
+    "capital": "Sao Tome",
     "normal_flag": "flags/normal/tp-flag.gif",
     "small_flag": "flags/small/tn_tp-flag.gif"
   },
@@ -819,8 +819,8 @@
     "normal_flag": "flags/normal/ce-flag.gif",
     "small_flag": "flags/small/tn_ce-flag.gif"
   },
-  "St. Vincent &#38; Grenadines": {
-    "capital": "UnknownCapital",
+  "St. Vincent &Grenadines": {
+    "capital": "Kingstown",
     "normal_flag": "flags/normal/vc-flag.gif",
     "small_flag": "flags/small/tn_vc-flag.gif"
   },
