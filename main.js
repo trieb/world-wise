@@ -246,6 +246,8 @@
             <div class=\"sub\">Type the country name and press <span class=\"kbd\">Enter</span>.</div>
             <div class=\"row\" style=\"margin-top: 10px;\">
               <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
+            </div>
+            <div class=\"row\" style=\"margin-top: 10px;\">
               <button class=\"primary\" id=\"btnSubmit\">Submit</button>
               <button id=\"btnHelp\">Help</button>
               <button id=\"btnShowAnswer\">Show Answer</button>
@@ -287,6 +289,8 @@
         <div class=\"sub\">Type the capital and press <span class=\"kbd\">Enter</span>.</div>
         <div class=\"row\" style=\"margin-top: 10px;\">
           <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
+        </div>
+        <div class=\"row\" style=\"margin-top: 10px;\">
           <button class=\"primary\" id=\"btnSubmit\">Submit</button>
           <button id=\"btnHelp\">Help</button>
           <button id=\"btnShowAnswer\">Show Answer</button>
@@ -310,6 +314,8 @@
         <div class=\"sub\">Type the country and press <span class=\"kbd\">Enter</span>.</div>
         <div class=\"row\" style=\"margin-top: 10px;\">
           <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
+        </div>
+        <div class=\"row\" style=\"margin-top: 10px;\">
           <button class=\"primary\" id=\"btnSubmit\">Submit</button>
           <button id=\"btnHelp\">Help</button>
           <button id=\"btnShowAnswer\">Show Answer</button>
