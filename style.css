@@ -10,7 +10,7 @@ body{
   background:radial-gradient(1200px 600px at 20% -10%, rgba(127,156,255,.25), transparent 60%),
              radial-gradient(900px 500px at 90% 0%, rgba(255,92,122,.18), transparent 55%),
              var(--bg);
-  color:var(--text);min-height:100vh;padding:8px 24px 24px 24px
+  color:var(--text);min-height:100vh;justify-items:center;padding:8px 24px 24px 24px
 }
 .app{width:min(980px,100%);display:grid;gap:8px;margin-top:8px}
 header{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}

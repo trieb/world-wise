@@ -48,7 +48,6 @@
   const elResult = $("#result");
   const elDataWarning = $("#dataWarning");
   const btnNext = $("#btnNext");
-  const btnSkip = $("#btnSkip");
   const btnReset = $("#btnReset");
   const btnShuffle = $("#btnShuffle");
   const btnToggleSetup = $("#btnToggleSetup");
@@ -249,6 +248,7 @@
               <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
               <button class=\"primary\" id=\"btnSubmit\">Submit</button>
               <button id=\"btnHelp\">Help</button>
+              <button id=\"btnShowAnswer\">Show Answer</button>
             </div>
             <div class=\"hints\" id=\"hintBox\">
               <div class=\"sub\">Pick one:</div>
@@ -289,6 +289,7 @@
           <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
           <button class=\"primary\" id=\"btnSubmit\">Submit</button>
           <button id=\"btnHelp\">Help</button>
+          <button id=\"btnShowAnswer\">Show Answer</button>
         </div>
         <div class=\"hints\" id=\"hintBox\">
           <div class=\"sub\">Pick one (but you still must type the answer):</div>
@@ -311,6 +312,7 @@
           <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
           <button class=\"primary\" id=\"btnSubmit\">Submit</button>
           <button id=\"btnHelp\">Help</button>
+          <button id=\"btnShowAnswer\">Show Answer</button>
         </div>
         <div class=\"hints\" id=\"hintBox\">
           <div class=\"sub\">Pick one (but you still must type the answer):</div>
@@ -377,15 +379,23 @@
     return options;
   }
   function wireHintButton({ type, item }) {
-    const btn = document.querySelector("#btnHelp");
+    const btnHelp = document.querySelector("#btnHelp");
+    const btnShowAnswer = document.querySelector("#btnShowAnswer");
     const box = document.querySelector("#hintBox");
     const grid = document.querySelector("#hintGrid");
-    if (!btn || !box || !grid) return;
+    if (!btnHelp || !box || !grid) return;
     const options = buildHintOptions({ type, item });
     grid.innerHTML = options.map(opt => `<button class=\"hintChip\" type=\"button\">${opt}</button>`).join("");
-    btn.addEventListener("click", () => {
+    btnHelp.addEventListener("click", () => {
+      //console.log("Help clicked");
       box.classList.toggle("show");
     });
+    btnShowAnswer.addEventListener("click", () => {
+        //console.log("Show Answer clicked");
+        showResult(false, `ℹ️ Answer: ${item.country} — ${item.capital}`);
+        setHud();
+    });
+    
     // Enable clicking a hint to fill and submit
     grid.querySelectorAll(".hintChip").forEach((chip) => {
       chip.addEventListener("click", () => {
@@ -398,6 +408,7 @@
       });
     });
   }
+
   if (!SHOW_SETTINGS_PANEL) {
     const sidebar = document.querySelector("aside.card");
     if (sidebar) sidebar.style.display = "none";
@@ -407,14 +418,6 @@
   async function init() {
     setHud();
     btnNext.addEventListener("click", nextQuestion);
-    btnSkip.addEventListener("click", () => {
-      if (!state.items.length) return;
-      state.streak = 0;
-      state.progress += 1;
-      setHud();
-      showResult(false, `⏭️ Skipped. Answer was: ${state.current?.item?.country ?? "—"} — ${state.current?.item?.capital ?? "—"}`);
-      state.locked = true;
-    });
     btnReset.addEventListener("click", resetGame);
     btnShuffle.addEventListener("click", () => {
       state.items = shuffle(state.items);
@@ -428,7 +431,7 @@
       const k = e.key.toLowerCase();
       if (!isTyping) {
         if (k === "n") nextQuestion();
-        if (k === "s") btnSkip.click();
+        if (k === "s") btnShowAnswer.click();
         if (k === "h") {
           const helpBtn = document.querySelector("#btnHelp");
           if (helpBtn) helpBtn.click();
