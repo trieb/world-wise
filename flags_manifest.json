@@ -2,976 +2,1171 @@
   "Afghanistan": {
     "capital": "Kabul",
     "normal_flag": "flags/normal/af-flag.gif",
-    "small_flag": "flags/small/tn_af-flag.gif"
+    "small_flag": "flags/small/tn_af-flag.gif",
+    "continent": "Asia"
   },
   "Albania": {
     "capital": "Tirana",
     "normal_flag": "flags/normal/al-flag.gif",
-    "small_flag": "flags/small/tn_al-flag.gif"
+    "small_flag": "flags/small/tn_al-flag.gif",
+    "continent": "Europe"
   },
   "Algeria": {
     "capital": "Algiers",
     "normal_flag": "flags/normal/ag-flag.gif",
-    "small_flag": "flags/small/tn_ag-flag.gif"
+    "small_flag": "flags/small/tn_ag-flag.gif",
+    "continent": "Africa"
   },
   "Andorra": {
     "capital": "Andorra la Vella",
     "normal_flag": "flags/normal/an-flag.gif",
-    "small_flag": "flags/small/tn_an-flag.gif"
+    "small_flag": "flags/small/tn_an-flag.gif",
+    "continent": "Europe"
   },
   "Angola": {
     "capital": "Luanda",
     "normal_flag": "flags/normal/ao-flag.gif",
-    "small_flag": "flags/small/tn_ao-flag.gif"
+    "small_flag": "flags/small/tn_ao-flag.gif",
+    "continent": "Africa"
   },
   "Antigua and Barbuda": {
     "capital": "Saint John's",
     "normal_flag": "flags/normal/ac-flag.gif",
-    "small_flag": "flags/small/tn_ac-flag.gif"
+    "small_flag": "flags/small/tn_ac-flag.gif",
+    "continent": "North America"
   },
   "Argentina": {
     "capital": "Buenos Aires",
     "normal_flag": "flags/normal/ar-flag.gif",
-    "small_flag": "flags/small/tn_ar-flag.gif"
+    "small_flag": "flags/small/tn_ar-flag.gif",
+    "continent": "South America"
   },
   "Armenia": {
     "capital": "Yerevan",
     "normal_flag": "flags/normal/am-flag.gif",
-    "small_flag": "flags/small/tn_am-flag.gif"
+    "small_flag": "flags/small/tn_am-flag.gif",
+    "continent": "Asia"
   },
   "Australia": {
     "capital": "Canberra",
     "normal_flag": "flags/normal/as-flag.gif",
-    "small_flag": "flags/small/tn_as-flag.gif"
+    "small_flag": "flags/small/tn_as-flag.gif",
+    "continent": "Oceania"
   },
   "Austria": {
     "capital": "Vienna",
     "normal_flag": "flags/normal/au-flag.gif",
-    "small_flag": "flags/small/tn_au-flag.gif"
+    "small_flag": "flags/small/tn_au-flag.gif",
+    "continent": "Europe"
   },
   "Azerbaijan": {
     "capital": "Baku",
     "normal_flag": "flags/normal/aj-flag.gif",
-    "small_flag": "flags/small/tn_aj-flag.gif"
+    "small_flag": "flags/small/tn_aj-flag.gif",
+    "continent": "Asia"
   },
   "Bahamas": {
     "capital": "Nassau",
     "normal_flag": "flags/normal/bf-flag.gif",
-    "small_flag": "flags/small/tn_bf-flag.gif"
+    "small_flag": "flags/small/tn_bf-flag.gif",
+    "continent": "North America"
   },
   "Bahrain": {
     "capital": "Manama",
     "normal_flag": "flags/normal/ba-flag.gif",
-    "small_flag": "flags/small/tn_ba-flag.gif"
+    "small_flag": "flags/small/tn_ba-flag.gif",
+    "continent": "Asia"
   },
   "Bangladesh": {
     "capital": "Dhaka",
     "normal_flag": "flags/normal/bg-flag.gif",
-    "small_flag": "flags/small/tn_bg-flag.gif"
+    "small_flag": "flags/small/tn_bg-flag.gif",
+    "continent": "Asia"
   },
   "Barbados": {
     "capital": "Bridgetown",
     "normal_flag": "flags/normal/bb-flag.gif",
-    "small_flag": "flags/small/tn_bb-flag.gif"
+    "small_flag": "flags/small/tn_bb-flag.gif",
+    "continent": "North America"
   },
   "Belarus": {
     "capital": "Minsk",
     "normal_flag": "flags/normal/bo-flag.gif",
-    "small_flag": "flags/small/tn_bo-flag.gif"
+    "small_flag": "flags/small/tn_bo-flag.gif",
+    "continent": "Europe"
   },
   "Belgium": {
     "capital": "Brussels",
     "normal_flag": "flags/normal/be-flag.gif",
-    "small_flag": "flags/small/tn_be-flag.gif"
+    "small_flag": "flags/small/tn_be-flag.gif",
+    "continent": "Europe"
   },
   "Belize": {
     "capital": "Belmopan",
     "normal_flag": "flags/normal/bh-flag.gif",
-    "small_flag": "flags/small/tn_bh-flag.gif"
+    "small_flag": "flags/small/tn_bh-flag.gif",
+    "continent": "North America"
   },
   "Benin": {
     "capital": "Porto-Novo",
     "normal_flag": "flags/normal/bn-flag.gif",
-    "small_flag": "flags/small/tn_bn-flag.gif"
+    "small_flag": "flags/small/tn_bn-flag.gif",
+    "continent": "Africa"
   },
   "Bhutan": {
     "capital": "Thimphu",
     "normal_flag": "flags/normal/bt-flag.gif",
-    "small_flag": "flags/small/tn_bt-flag.gif"
+    "small_flag": "flags/small/tn_bt-flag.gif",
+    "continent": "Asia"
   },
   "Bolivia": {
     "capital": "Sucre",
     "normal_flag": "flags/normal/bl-flag.gif",
-    "small_flag": "flags/small/tn_bl-flag.gif"
+    "small_flag": "flags/small/tn_bl-flag.gif",
+    "continent": "South America"
   },
   "Bosnia and Herzegovina": {
     "capital": "Sarajevo",
     "normal_flag": "flags/normal/bk-flag.gif",
-    "small_flag": "flags/small/tn_bk-flag.gif"
+    "small_flag": "flags/small/tn_bk-flag.gif",
+    "continent": "Europe"
   },
   "Botswana": {
     "capital": "Gaborone",
     "normal_flag": "flags/normal/bc-flag.gif",
-    "small_flag": "flags/small/tn_bc-flag.gif"
+    "small_flag": "flags/small/tn_bc-flag.gif",
+    "continent": "Africa"
   },
   "Brazil": {
     "capital": "Brasília",
     "normal_flag": "flags/normal/br-flag.gif",
-    "small_flag": "flags/small/tn_br-flag.gif"
+    "small_flag": "flags/small/tn_br-flag.gif",
+    "continent": "South America"
   },
   "Brunei": {
     "capital": "Bandar Seri Begawan",
     "normal_flag": "flags/normal/bx-flag.gif",
-    "small_flag": "flags/small/tn_bx-flag.gif"
+    "small_flag": "flags/small/tn_bx-flag.gif",
+    "continent": "Asia"
   },
   "Bulgaria": {
     "capital": "Sofia",
     "normal_flag": "flags/normal/bu-flag.gif",
-    "small_flag": "flags/small/tn_bu-flag.gif"
+    "small_flag": "flags/small/tn_bu-flag.gif",
+    "continent": "Europe"
   },
   "Burkina Faso": {
     "capital": "Ouagadougou",
     "normal_flag": "flags/normal/uv-flag.gif",
-    "small_flag": "flags/small/tn_uv-flag.gif"
+    "small_flag": "flags/small/tn_uv-flag.gif",
+    "continent": "Africa"
   },
   "Burundi": {
     "capital": "Gitega",
     "normal_flag": "flags/normal/by-flag.gif",
-    "small_flag": "flags/small/tn_by-flag.gif"
+    "small_flag": "flags/small/tn_by-flag.gif",
+    "continent": "Africa"
   },
   "Cape Verde": {
     "capital": "Praia",
     "normal_flag": "flags/normal/cv-flag.gif",
-    "small_flag": "flags/small/tn_cv-flag.gif"
+    "small_flag": "flags/small/tn_cv-flag.gif",
+    "continent": "Africa"
   },
   "Cambodia": {
     "capital": "Phnom Penh",
     "normal_flag": "flags/normal/cb-flag.gif",
-    "small_flag": "flags/small/tn_cb-flag.gif"
+    "small_flag": "flags/small/tn_cb-flag.gif",
+    "continent": "Asia"
   },
   "Cameroon": {
     "capital": "Yaoundé",
     "normal_flag": "flags/normal/cm-flag.gif",
-    "small_flag": "flags/small/tn_cm-flag.gif"
+    "small_flag": "flags/small/tn_cm-flag.gif",
+    "continent": "Africa"
   },
   "Canada": {
     "capital": "Ottawa",
     "normal_flag": "flags/normal/ca-flag.gif",
-    "small_flag": "flags/small/tn_ca-flag.gif"
+    "small_flag": "flags/small/tn_ca-flag.gif",
+    "continent": "North America"
   },
   "Central African Republic": {
     "capital": "Bangui",
     "normal_flag": "flags/normal/ct-flag.gif",
-    "small_flag": "flags/small/tn_ct-flag.gif"
+    "small_flag": "flags/small/tn_ct-flag.gif",
+    "continent": "Africa"
   },
   "Chad": {
     "capital": "N'Djamena",
     "normal_flag": "flags/normal/cd-flag.gif",
-    "small_flag": "flags/small/tn_cd-flag.gif"
+    "small_flag": "flags/small/tn_cd-flag.gif",
+    "continent": "Africa"
   },
   "Chile": {
     "capital": "Santiago",
     "normal_flag": "flags/normal/ci-flag.gif",
-    "small_flag": "flags/small/tn_ci-flag.gif"
+    "small_flag": "flags/small/tn_ci-flag.gif",
+    "continent": "South America"
   },
   "China": {
     "capital": "Beijing",
     "normal_flag": "flags/normal/ch-flag.gif",
-    "small_flag": "flags/small/tn_ch-flag.gif"
+    "small_flag": "flags/small/tn_ch-flag.gif",
+    "continent": "Asia"
   },
   "Colombia": {
     "capital": "Bogotá",
     "normal_flag": "flags/normal/co-flag.gif",
-    "small_flag": "flags/small/tn_co-flag.gif"
+    "small_flag": "flags/small/tn_co-flag.gif",
+    "continent": "South America"
   },
   "Comoros": {
     "capital": "Moroni",
     "normal_flag": "flags/normal/cn-flag.gif",
-    "small_flag": "flags/small/tn_cn-flag.gif"
+    "small_flag": "flags/small/tn_cn-flag.gif",
+    "continent": "Africa"
   },
   "Congo": {
     "capital": "Brazzaville",
     "normal_flag": "flags/normal/cg-flag.jpg",
-    "small_flag": "flags/small/tn_cg-flag.jpg"
+    "small_flag": "flags/small/tn_cg-flag.jpg",
+    "continent": "Africa"
   },
   "Costa Rica": {
     "capital": "San José",
     "normal_flag": "flags/normal/cs-flag.gif",
-    "small_flag": "flags/small/tn_cs-flag.gif"
+    "small_flag": "flags/small/tn_cs-flag.gif",
+    "continent": "North America"
   },
   "Croatia": {
     "capital": "Zagreb",
     "normal_flag": "flags/normal/hr-flag.gif",
-    "small_flag": "flags/small/tn_hr-flag.gif"
+    "small_flag": "flags/small/tn_hr-flag.gif",
+    "continent": "Europe"
   },
   "Cuba": {
     "capital": "Havana",
     "normal_flag": "flags/normal/cu-flag.gif",
-    "small_flag": "flags/small/tn_cu-flag.gif"
+    "small_flag": "flags/small/tn_cu-flag.gif",
+    "continent": "North America"
   },
   "Cyprus": {
     "capital": "Nicosia",
     "normal_flag": "flags/normal/cy-flag.gif",
-    "small_flag": "flags/small/tn_cy-flag.gif"
+    "small_flag": "flags/small/tn_cy-flag.gif",
+    "continent": "Asia"
   },
   "Czech Republic (Czechia)": {
     "capital": "Prague",
     "normal_flag": "flags/normal/ez-flag.gif",
-    "small_flag": "flags/small/tn_ez-flag.gif"
+    "small_flag": "flags/small/tn_ez-flag.gif",
+    "continent": "Europe"
   },
   "Côte d'Ivoire": {
     "capital": "Yamoussoukro",
     "normal_flag": "flags/normal/iv-flag.gif",
-    "small_flag": "flags/small/tn_iv-flag.gif"
+    "small_flag": "flags/small/tn_iv-flag.gif",
+    "continent": "Africa"
   },
   "Denmark": {
     "capital": "Copenhagen",
     "normal_flag": "flags/normal/da-flag.gif",
-    "small_flag": "flags/small/tn_da-flag.gif"
+    "small_flag": "flags/small/tn_da-flag.gif",
+    "continent": "Europe"
   },
   "Djibouti": {
     "capital": "Djibouti",
     "normal_flag": "flags/normal/dj-flag.gif",
-    "small_flag": "flags/small/tn_dj-flag.gif"
+    "small_flag": "flags/small/tn_dj-flag.gif",
+    "continent": "Africa"
   },
   "Dominica": {
     "capital": "Roseau",
     "normal_flag": "flags/normal/do-flag.gif",
-    "small_flag": "flags/small/tn_do-flag.gif"
+    "small_flag": "flags/small/tn_do-flag.gif",
+    "continent": "North America"
   },
   "Dominican Republic": {
     "capital": "Santo Domingo",
     "normal_flag": "flags/normal/dr-flag.gif",
-    "small_flag": "flags/small/tn_dr-flag.gif"
+    "small_flag": "flags/small/tn_dr-flag.gif",
+    "continent": "North America"
   },
   "DR Congo": {
     "capital": "Kinshasa",
     "normal_flag": "flags/normal/congo-flag.gif",
-    "small_flag": "flags/small/tn_congo-flag.gif"
+    "small_flag": "flags/small/tn_congo-flag.gif",
+    "continent": "Africa"
   },
   "Ecuador": {
     "capital": "Quito",
     "normal_flag": "flags/normal/ec-flag.gif",
-    "small_flag": "flags/small/tn_ec-flag.gif"
+    "small_flag": "flags/small/tn_ec-flag.gif",
+    "continent": "South America"
   },
   "Egypt": {
     "capital": "Cairo",
     "normal_flag": "flags/normal/eg-flag.gif",
-    "small_flag": "flags/small/tn_eg-flag.gif"
+    "small_flag": "flags/small/tn_eg-flag.gif",
+    "continent": "Africa"
   },
   "El Salvador": {
     "capital": "San Salvador",
     "normal_flag": "flags/normal/es-flag.gif",
-    "small_flag": "flags/small/tn_es-flag.gif"
+    "small_flag": "flags/small/tn_es-flag.gif",
+    "continent": "North America"
   },
   "Equatorial Guinea": {
     "capital": "Malabo",
     "normal_flag": "flags/normal/ek-flag.gif",
-    "small_flag": "flags/small/tn_ek-flag.gif"
+    "small_flag": "flags/small/tn_ek-flag.gif",
+    "continent": "Africa"
   },
   "Eritrea": {
     "capital": "Asmara",
     "normal_flag": "flags/normal/er-flag.gif",
-    "small_flag": "flags/small/tn_er-flag.gif"
+    "small_flag": "flags/small/tn_er-flag.gif",
+    "continent": "Africa"
   },
   "Estonia": {
     "capital": "Tallinn",
     "normal_flag": "flags/normal/en-flag.gif",
-    "small_flag": "flags/small/tn_en-flag.gif"
+    "small_flag": "flags/small/tn_en-flag.gif",
+    "continent": "Europe"
   },
   "Eswatini": {
     "capital": "Mbabane",
     "normal_flag": "flags/normal/wz-flag.gif",
-    "small_flag": "flags/small/tn_wz-flag.gif"
+    "small_flag": "flags/small/tn_wz-flag.gif",
+    "continent": "Africa"
   },
   "Ethiopia": {
     "capital": "Addis Ababa",
     "normal_flag": "flags/normal/et-flag.gif",
-    "small_flag": "flags/small/tn_et-flag.gif"
+    "small_flag": "flags/small/tn_et-flag.gif",
+    "continent": "Africa"
   },
   "Fiji": {
     "capital": "Suva",
     "normal_flag": "flags/normal/fj-flag.gif",
-    "small_flag": "flags/small/tn_fj-flag.gif"
+    "small_flag": "flags/small/tn_fj-flag.gif",
+    "continent": "Oceania"
   },
   "Finland": {
     "capital": "Helsinki",
     "normal_flag": "flags/normal/fi-flag.gif",
-    "small_flag": "flags/small/tn_fi-flag.gif"
+    "small_flag": "flags/small/tn_fi-flag.gif",
+    "continent": "Europe"
   },
   "France": {
     "capital": "Paris",
     "normal_flag": "flags/normal/fr-flag.gif",
-    "small_flag": "flags/small/tn_fr-flag.gif"
+    "small_flag": "flags/small/tn_fr-flag.gif",
+    "continent": "Europe"
   },
   "Gabon": {
     "capital": "Libreville",
     "normal_flag": "flags/normal/gb-flag.gif",
-    "small_flag": "flags/small/tn_gb-flag.gif"
+    "small_flag": "flags/small/tn_gb-flag.gif",
+    "continent": "Africa"
   },
   "Gambia": {
     "capital": "Banjul",
     "normal_flag": "flags/normal/ga-flag.gif",
-    "small_flag": "flags/small/tn_ga-flag.gif"
+    "small_flag": "flags/small/tn_ga-flag.gif",
+    "continent": "Africa"
   },
   "Georgia": {
     "capital": "Tbilisi",
     "normal_flag": "flags/normal/gg-flag.gif",
-    "small_flag": "flags/small/tn_gg-flag.gif"
+    "small_flag": "flags/small/tn_gg-flag.gif",
+    "continent": "Asia"
   },
   "Germany": {
     "capital": "Berlin",
     "normal_flag": "flags/normal/gm-flag.gif",
-    "small_flag": "flags/small/tn_gm-flag.gif"
+    "small_flag": "flags/small/tn_gm-flag.gif",
+    "continent": "Europe"
   },
   "Ghana": {
     "capital": "Accra",
     "normal_flag": "flags/normal/gh-flag.gif",
-    "small_flag": "flags/small/tn_gh-flag.gif"
+    "small_flag": "flags/small/tn_gh-flag.gif",
+    "continent": "Africa"
   },
   "Greece": {
     "capital": "Athens",
     "normal_flag": "flags/normal/gr-flag.gif",
-    "small_flag": "flags/small/tn_gr-flag.gif"
+    "small_flag": "flags/small/tn_gr-flag.gif",
+    "continent": "Europe"
   },
   "Grenada": {
     "capital": "St. George's",
     "normal_flag": "flags/normal/gj-flag.gif",
-    "small_flag": "flags/small/tn_gj-flag.gif"
+    "small_flag": "flags/small/tn_gj-flag.gif",
+    "continent": "North America"
   },
   "Guatemala": {
     "capital": "Guatemala City",
     "normal_flag": "flags/normal/gt-flag.gif",
-    "small_flag": "flags/small/tn_gt-flag.gif"
+    "small_flag": "flags/small/tn_gt-flag.gif",
+    "continent": "North America"
   },
   "Guinea": {
     "capital": "Conakry",
     "normal_flag": "flags/normal/gv-flag.gif",
-    "small_flag": "flags/small/tn_gv-flag.gif"
+    "small_flag": "flags/small/tn_gv-flag.gif",
+    "continent": "Africa"
   },
   "Guinea-Bissau": {
     "capital": "Bissau",
     "normal_flag": "flags/normal/pu-flag.gif",
-    "small_flag": "flags/small/tn_pu-flag.gif"
+    "small_flag": "flags/small/tn_pu-flag.gif",
+    "continent": "Africa"
   },
   "Guyana": {
     "capital": "Georgetown",
     "normal_flag": "flags/normal/gy-flag.gif",
-    "small_flag": "flags/small/tn_gy-flag.gif"
+    "small_flag": "flags/small/tn_gy-flag.gif",
+    "continent": "South America"
   },
   "Haiti": {
     "capital": "Port-au-Prince",
     "normal_flag": "flags/normal/ha-flag.gif",
-    "small_flag": "flags/small/tn_ha-flag.gif"
+    "small_flag": "flags/small/tn_ha-flag.gif",
+    "continent": "North America"
   },
   "Holy See": {
     "capital": "Vatican City",
     "normal_flag": "flags/normal/vt-flag.gif",
-    "small_flag": "flags/small/tn_vt-flag.gif"
+    "small_flag": "flags/small/tn_vt-flag.gif",
+    "continent": "Europe"
   },
   "Honduras": {
     "capital": "Tegucigalpa",
     "normal_flag": "flags/normal/ho-flag.gif",
-    "small_flag": "flags/small/tn_ho-flag.gif"
+    "small_flag": "flags/small/tn_ho-flag.gif",
+    "continent": "North America"
   },
   "Hungary": {
     "capital": "Budapest",
     "normal_flag": "flags/normal/hu-flag.gif",
-    "small_flag": "flags/small/tn_hu-flag.gif"
+    "small_flag": "flags/small/tn_hu-flag.gif",
+    "continent": "Europe"
   },
   "Iceland": {
     "capital": "Reykjavik",
     "normal_flag": "flags/normal/ic-flag.gif",
-    "small_flag": "flags/small/tn_ic-flag.gif"
+    "small_flag": "flags/small/tn_ic-flag.gif",
+    "continent": "Europe"
   },
   "India": {
     "capital": "New Delhi",
     "normal_flag": "flags/normal/in-flag.gif",
-    "small_flag": "flags/small/tn_in-flag.gif"
+    "small_flag": "flags/small/tn_in-flag.gif",
+    "continent": "Asia"
   },
   "Indonesia": {
     "capital": "Jakarta",
     "normal_flag": "flags/normal/id-flag.gif",
-    "small_flag": "flags/small/tn_id-flag.gif"
+    "small_flag": "flags/small/tn_id-flag.gif",
+    "continent": "Asia"
   },
   "Iran": {
     "capital": "Tehran",
     "normal_flag": "flags/normal/ir-flag.gif",
-    "small_flag": "flags/small/tn_ir-flag.gif"
+    "small_flag": "flags/small/tn_ir-flag.gif",
+    "continent": "Asia"
   },
   "Iraq": {
     "capital": "Baghdad",
     "normal_flag": "flags/normal/iz-flag.gif",
-    "small_flag": "flags/small/tn_iz-flag.gif"
+    "small_flag": "flags/small/tn_iz-flag.gif",
+    "continent": "Asia"
   },
   "Ireland": {
     "capital": "Dublin",
     "normal_flag": "flags/normal/ei-flag.gif",
-    "small_flag": "flags/small/tn_ei-flag.gif"
+    "small_flag": "flags/small/tn_ei-flag.gif",
+    "continent": "Europe"
   },
   "Israel": {
     "capital": "Jerusalem",
     "normal_flag": "flags/normal/is-flag.gif",
-    "small_flag": "flags/small/tn_is-flag.gif"
+    "small_flag": "flags/small/tn_is-flag.gif",
+    "continent": "Asia"
   },
   "Italy": {
     "capital": "Rome",
     "normal_flag": "flags/normal/it-flag.gif",
-    "small_flag": "flags/small/tn_it-flag.gif"
+    "small_flag": "flags/small/tn_it-flag.gif",
+    "continent": "Europe"
   },
   "Jamaica": {
     "capital": "Kingston",
     "normal_flag": "flags/normal/jm-flag.gif",
-    "small_flag": "flags/small/tn_jm-flag.gif"
+    "small_flag": "flags/small/tn_jm-flag.gif",
+    "continent": "North America"
   },
   "Japan": {
     "capital": "Tokyo",
     "normal_flag": "flags/normal/ja-flag.gif",
-    "small_flag": "flags/small/tn_ja-flag.gif"
+    "small_flag": "flags/small/tn_ja-flag.gif",
+    "continent": "Asia"
   },
   "Jordan": {
     "capital": "Amman",
     "normal_flag": "flags/normal/jo-flag.gif",
-    "small_flag": "flags/small/tn_jo-flag.gif"
+    "small_flag": "flags/small/tn_jo-flag.gif",
+    "continent": "Asia"
   },
   "Kazakhstan": {
     "capital": "Astana",
     "normal_flag": "flags/normal/kz-flag.gif",
-    "small_flag": "flags/small/tn_kz-flag.gif"
+    "small_flag": "flags/small/tn_kz-flag.gif",
+    "continent": "Asia"
   },
   "Kenya": {
     "capital": "Nairobi",
     "normal_flag": "flags/normal/ke-flag.gif",
-    "small_flag": "flags/small/tn_ke-flag.gif"
+    "small_flag": "flags/small/tn_ke-flag.gif",
+    "continent": "Africa"
   },
   "Kiribati": {
     "capital": "South Tarawa",
     "normal_flag": "flags/normal/kr-flag.gif",
-    "small_flag": "flags/small/tn_kr-flag.gif"
+    "small_flag": "flags/small/tn_kr-flag.gif",
+    "continent": "Oceania"
   },
   "Kuwait": {
     "capital": "Kuwait City",
     "normal_flag": "flags/normal/ku-flag.gif",
-    "small_flag": "flags/small/tn_ku-flag.gif"
+    "small_flag": "flags/small/tn_ku-flag.gif",
+    "continent": "Asia"
   },
   "Kyrgyzstan": {
     "capital": "Bishkek",
     "normal_flag": "flags/normal/kg-flag.gif",
-    "small_flag": "flags/small/tn_kg-flag.gif"
+    "small_flag": "flags/small/tn_kg-flag.gif",
+    "continent": "Asia"
   },
   "Laos": {
     "capital": "Vientiane",
     "normal_flag": "flags/normal/la-flag.gif",
-    "small_flag": "flags/small/tn_la-flag.gif"
+    "small_flag": "flags/small/tn_la-flag.gif",
+    "continent": "Asia"
   },
   "Latvia": {
     "capital": "Riga",
     "normal_flag": "flags/normal/lg-flag.gif",
-    "small_flag": "flags/small/tn_lg-flag.gif"
+    "small_flag": "flags/small/tn_lg-flag.gif",
+    "continent": "Europe"
   },
   "Lebanon": {
     "capital": "Beirut",
     "normal_flag": "flags/normal/le-flag.gif",
-    "small_flag": "flags/small/tn_le-flag.gif"
+    "small_flag": "flags/small/tn_le-flag.gif",
+    "continent": "Asia"
   },
   "Lesotho": {
     "capital": "Maseru",
     "normal_flag": "flags/normal/lt-flag.gif",
-    "small_flag": "flags/small/tn_lt-flag.gif"
+    "small_flag": "flags/small/tn_lt-flag.gif",
+    "continent": "Africa"
   },
   "Liberia": {
     "capital": "Monrovia",
     "normal_flag": "flags/normal/li-flag.gif",
-    "small_flag": "flags/small/tn_li-flag.gif"
+    "small_flag": "flags/small/tn_li-flag.gif",
+    "continent": "Africa"
   },
   "Libya": {
     "capital": "Tripoli",
     "normal_flag": "flags/normal/ly-flag.gif",
-    "small_flag": "flags/small/tn_ly-flag.gif"
+    "small_flag": "flags/small/tn_ly-flag.gif",
+    "continent": "Africa"
   },
   "Liechtenstein": {
     "capital": "Vaduz",
     "normal_flag": "flags/normal/ls-flag.gif",
-    "small_flag": "flags/small/tn_ls-flag.gif"
+    "small_flag": "flags/small/tn_ls-flag.gif",
+    "continent": "Europe"
   },
   "Lithuania": {
     "capital": "Vilnius",
     "normal_flag": "flags/normal/lh-flag.gif",
-    "small_flag": "flags/small/tn_lh-flag.gif"
+    "small_flag": "flags/small/tn_lh-flag.gif",
+    "continent": "Europe"
   },
   "Luxembourg": {
     "capital": "Luxembourg",
     "normal_flag": "flags/normal/lu-flag.gif",
-    "small_flag": "flags/small/tn_lu-flag.gif"
+    "small_flag": "flags/small/tn_lu-flag.gif",
+    "continent": "Europe"
   },
   "Madagascar": {
     "capital": "Antananarivo",
     "normal_flag": "flags/normal/ma-flag.gif",
-    "small_flag": "flags/small/tn_ma-flag.gif"
+    "small_flag": "flags/small/tn_ma-flag.gif",
+    "continent": "Africa"
   },
   "Malawi": {
     "capital": "Lilongwe",
     "normal_flag": "flags/normal/mi-flag.gif",
-    "small_flag": "flags/small/tn_mi-flag.gif"
+    "small_flag": "flags/small/tn_mi-flag.gif",
+    "continent": "Africa"
   },
   "Malaysia": {
     "capital": "Kuala Lumpur",
     "normal_flag": "flags/normal/my-flag.gif",
-    "small_flag": "flags/small/tn_my-flag.gif"
+    "small_flag": "flags/small/tn_my-flag.gif",
+    "continent": "Asia"
   },
   "Maldives": {
     "capital": "Malé",
     "normal_flag": "flags/normal/mv-flag.gif",
-    "small_flag": "flags/small/tn_mv-flag.gif"
+    "small_flag": "flags/small/tn_mv-flag.gif",
+    "continent": "Asia"
   },
   "Mali": {
     "capital": "Bamako",
     "normal_flag": "flags/normal/ml-flag.gif",
-    "small_flag": "flags/small/tn_ml-flag.gif"
+    "small_flag": "flags/small/tn_ml-flag.gif",
+    "continent": "Africa"
   },
   "Malta": {
     "capital": "Valletta",
     "normal_flag": "flags/normal/mt-flag.gif",
-    "small_flag": "flags/small/tn_mt-flag.gif"
+    "small_flag": "flags/small/tn_mt-flag.gif",
+    "continent": "Europe"
   },
   "Marshall Islands": {
     "capital": "Majuro",
     "normal_flag": "flags/normal/rm-flag.gif",
-    "small_flag": "flags/small/tn_rm-flag.gif"
+    "small_flag": "flags/small/tn_rm-flag.gif",
+    "continent": "Oceania"
   },
   "Mauritania": {
     "capital": "Nouakchott",
     "normal_flag": "flags/normal/mr-flag.gif",
-    "small_flag": "flags/small/tn_mr-flag.gif"
+    "small_flag": "flags/small/tn_mr-flag.gif",
+    "continent": "Africa"
   },
   "Mauritius": {
     "capital": "Port Louis",
     "normal_flag": "flags/normal/mp-flag.gif",
-    "small_flag": "flags/small/tn_mp-flag.gif"
+    "small_flag": "flags/small/tn_mp-flag.gif",
+    "continent": "Africa"
   },
   "Mexico": {
     "capital": "Mexico City",
     "normal_flag": "flags/normal/mx-flag.gif",
-    "small_flag": "flags/small/tn_mx-flag.gif"
+    "small_flag": "flags/small/tn_mx-flag.gif",
+    "continent": "North America"
   },
   "Micronesia": {
     "capital": "Palikir",
     "normal_flag": "flags/normal/fm-flag.gif",
-    "small_flag": "flags/small/tn_fm-flag.gif"
+    "small_flag": "flags/small/tn_fm-flag.gif",
+    "continent": "Oceania"
   },
   "Moldova": {
     "capital": "Chișinău",
     "normal_flag": "flags/normal/md-flag.gif",
-    "small_flag": "flags/small/tn_md-flag.gif"
+    "small_flag": "flags/small/tn_md-flag.gif",
+    "continent": "Europe"
   },
   "Monaco": {
     "capital": "Monaco",
     "normal_flag": "flags/normal/mn-flag.gif",
-    "small_flag": "flags/small/tn_mn-flag.gif"
+    "small_flag": "flags/small/tn_mn-flag.gif",
+    "continent": "Europe"
   },
   "Mongolia": {
     "capital": "Ulan Bator",
     "normal_flag": "flags/normal/mg-flag.gif",
-    "small_flag": "flags/small/tn_mg-flag.gif"
+    "small_flag": "flags/small/tn_mg-flag.gif",
+    "continent": "Asia"
   },
   "Montenegro": {
     "capital": "Podgorica",
     "normal_flag": "flags/normal/mj-flag.gif",
-    "small_flag": "flags/small/tn_mj-flag.gif"
+    "small_flag": "flags/small/tn_mj-flag.gif",
+    "continent": "Europe"
   },
   "Morocco": {
     "capital": "Rabat",
     "normal_flag": "flags/normal/mo-flag.gif",
-    "small_flag": "flags/small/tn_mo-flag.gif"
+    "small_flag": "flags/small/tn_mo-flag.gif",
+    "continent": "Africa"
   },
   "Mozambique": {
     "capital": "Maputo",
     "normal_flag": "flags/normal/mz-flag.gif",
-    "small_flag": "flags/small/tn_mz-flag.gif"
+    "small_flag": "flags/small/tn_mz-flag.gif",
+    "continent": "Africa"
   },
   "Myanmar": {
     "capital": "Naypyidaw",
     "normal_flag": "flags/normal/bm-flag.gif",
-    "small_flag": "flags/small/tn_bm-flag.gif"
+    "small_flag": "flags/small/tn_bm-flag.gif",
+    "continent": "Asia"
   },
   "Namibia": {
     "capital": "Windhoek",
     "normal_flag": "flags/normal/wa-flag.gif",
-    "small_flag": "flags/small/tn_wa-flag.gif"
+    "small_flag": "flags/small/tn_wa-flag.gif",
+    "continent": "Africa"
   },
   "Nauru": {
     "capital": "Yaren",
     "normal_flag": "flags/normal/nr-flag.gif",
-    "small_flag": "flags/small/tn_nr-flag.gif"
+    "small_flag": "flags/small/tn_nr-flag.gif",
+    "continent": "Oceania"
   },
   "Nepal": {
     "capital": "Kathmandu",
     "normal_flag": "flags/normal/np-flag.gif",
-    "small_flag": "flags/small/tn_np-flag.gif"
+    "small_flag": "flags/small/tn_np-flag.gif",
+    "continent": "Asia"
   },
   "Netherlands": {
     "capital": "Amsterdam",
     "normal_flag": "flags/normal/nl-flag.gif",
-    "small_flag": "flags/small/tn_nl-flag.gif"
+    "small_flag": "flags/small/tn_nl-flag.gif",
+    "continent": "Europe"
   },
   "New Zealand": {
     "capital": "Wellington",
     "normal_flag": "flags/normal/nz-flag.gif",
-    "small_flag": "flags/small/tn_nz-flag.gif"
+    "small_flag": "flags/small/tn_nz-flag.gif",
+    "continent": "Oceania"
   },
   "Nicaragua": {
     "capital": "Managua",
     "normal_flag": "flags/normal/nu-flag.gif",
-    "small_flag": "flags/small/tn_nu-flag.gif"
+    "small_flag": "flags/small/tn_nu-flag.gif",
+    "continent": "North America"
   },
   "Niger": {
     "capital": "Niamey",
     "normal_flag": "flags/normal/ng-flag.gif",
-    "small_flag": "flags/small/tn_ng-flag.gif"
+    "small_flag": "flags/small/tn_ng-flag.gif",
+    "continent": "Africa"
   },
   "Nigeria": {
     "capital": "Abuja",
     "normal_flag": "flags/normal/ni-flag.gif",
-    "small_flag": "flags/small/tn_ni-flag.gif"
+    "small_flag": "flags/small/tn_ni-flag.gif",
+    "continent": "Africa"
   },
   "North Korea": {
     "capital": "Pyongyang",
     "normal_flag": "flags/normal/kn-flag.gif",
-    "small_flag": "flags/small/tn_kn-flag.gif"
+    "small_flag": "flags/small/tn_kn-flag.gif",
+    "continent": "Asia"
   },
   "North Macedonia": {
     "capital": "Skopje",
     "normal_flag": "flags/normal/mk-flag.gif",
-    "small_flag": "flags/small/tn_mk-flag.gif"
+    "small_flag": "flags/small/tn_mk-flag.gif",
+    "continent": "Europe"
   },
   "Norway": {
     "capital": "Oslo",
     "normal_flag": "flags/normal/no-flag.gif",
-    "small_flag": "flags/small/tn_no-flag.gif"
+    "small_flag": "flags/small/tn_no-flag.gif",
+    "continent": "Europe"
   },
   "Oman": {
     "capital": "Muscat",
     "normal_flag": "flags/normal/mu-flag.gif",
-    "small_flag": "flags/small/tn_mu-flag.gif"
+    "small_flag": "flags/small/tn_mu-flag.gif",
+    "continent": "Asia"
   },
   "Pakistan": {
     "capital": "Islamabad",
     "normal_flag": "flags/normal/pk-flag.gif",
-    "small_flag": "flags/small/tn_pk-flag.gif"
+    "small_flag": "flags/small/tn_pk-flag.gif",
+    "continent": "Asia"
   },
   "Palau": {
     "capital": "Ngerulmud",
     "normal_flag": "flags/normal/ps-flag.gif",
-    "small_flag": "flags/small/tn_ps-flag.gif"
+    "small_flag": "flags/small/tn_ps-flag.gif",
+    "continent": "Oceania"
   },
   "Panama": {
     "capital": "Panama City",
     "normal_flag": "flags/normal/pm-flag.gif",
-    "small_flag": "flags/small/tn_pm-flag.gif"
+    "small_flag": "flags/small/tn_pm-flag.gif",
+    "continent": "North America"
   },
   "Papua New Guinea": {
     "capital": "Port Moresby",
     "normal_flag": "flags/normal/pp-flag.gif",
-    "small_flag": "flags/small/tn_pp-flag.gif"
+    "small_flag": "flags/small/tn_pp-flag.gif",
+    "continent": "Oceania"
   },
   "Paraguay": {
     "capital": "Asunción",
     "normal_flag": "flags/normal/pa-flag.gif",
-    "small_flag": "flags/small/tn_pa-flag.gif"
+    "small_flag": "flags/small/tn_pa-flag.gif",
+    "continent": "South America"
   },
   "Peru": {
     "capital": "Lima",
     "normal_flag": "flags/normal/pe-flag.gif",
-    "small_flag": "flags/small/tn_pe-flag.gif"
+    "small_flag": "flags/small/tn_pe-flag.gif",
+    "continent": "South America"
   },
   "Philippines": {
     "capital": "Manila",
     "normal_flag": "flags/normal/rp-flag.gif",
-    "small_flag": "flags/small/tn_rp-flag.gif"
+    "small_flag": "flags/small/tn_rp-flag.gif",
+    "continent": "Asia"
   },
   "Poland": {
     "capital": "Warsaw",
     "normal_flag": "flags/normal/pl-flag.gif",
-    "small_flag": "flags/small/tn_pl-flag.gif"
+    "small_flag": "flags/small/tn_pl-flag.gif",
+    "continent": "Europe"
   },
   "Portugal": {
     "capital": "Lisbon",
     "normal_flag": "flags/normal/po-flag.gif",
-    "small_flag": "flags/small/tn_po-flag.gif"
+    "small_flag": "flags/small/tn_po-flag.gif",
+    "continent": "Europe"
   },
   "Qatar": {
     "capital": "Doha",
     "normal_flag": "flags/normal/qa-flag.gif",
-    "small_flag": "flags/small/tn_qa-flag.gif"
+    "small_flag": "flags/small/tn_qa-flag.gif",
+    "continent": "Asia"
   },
   "Romania": {
     "capital": "Bucharest",
     "normal_flag": "flags/normal/ro-flag.gif",
-    "small_flag": "flags/small/tn_ro-flag.gif"
+    "small_flag": "flags/small/tn_ro-flag.gif",
+    "continent": "Europe"
   },
   "Russia": {
     "capital": "Moscow",
     "normal_flag": "flags/normal/rs-flag.gif",
-    "small_flag": "flags/small/tn_rs-flag.gif"
+    "small_flag": "flags/small/tn_rs-flag.gif",
+    "continent": "Europe"
   },
   "Rwanda": {
     "capital": "Kigali",
     "normal_flag": "flags/normal/rw-flag.gif",
-    "small_flag": "flags/small/tn_rw-flag.gif"
+    "small_flag": "flags/small/tn_rw-flag.gif",
+    "continent": "Africa"
   },
   "Saint Kitts & Nevis": {
     "capital": "Basseterre",
     "normal_flag": "flags/normal/sc-flag.gif",
-    "small_flag": "flags/small/tn_sc-flag.gif"
+    "small_flag": "flags/small/tn_sc-flag.gif",
+    "continent": "North America"
   },
   "Saint Lucia": {
     "capital": "Castries",
     "normal_flag": "flags/normal/st-flag.gif",
-    "small_flag": "flags/small/tn_st-flag.gif"
+    "small_flag": "flags/small/tn_st-flag.gif",
+    "continent": "North America"
   },
   "Samoa": {
     "capital": "Apia",
     "normal_flag": "flags/normal/ws-flag.gif",
-    "small_flag": "flags/small/tn_ws-flag.gif"
+    "small_flag": "flags/small/tn_ws-flag.gif",
+    "continent": "Oceania"
   },
   "San Marino": {
     "capital": "City of San Marino",
     "normal_flag": "flags/normal/sm-flag.gif",
-    "small_flag": "flags/small/tn_sm-flag.gif"
+    "small_flag": "flags/small/tn_sm-flag.gif",
+    "continent": "Europe"
   },
   "Sao Tome & Principe": {
     "capital": "Sao Tome",
     "normal_flag": "flags/normal/tp-flag.gif",
-    "small_flag": "flags/small/tn_tp-flag.gif"
+    "small_flag": "flags/small/tn_tp-flag.gif",
+    "continent": "Africa"
   },
   "Saudi Arabia": {
     "capital": "Riyadh",
     "normal_flag": "flags/normal/sa-flag.gif",
-    "small_flag": "flags/small/tn_sa-flag.gif"
+    "small_flag": "flags/small/tn_sa-flag.gif",
+    "continent": "Asia"
   },
   "Senegal": {
     "capital": "Dakar",
     "normal_flag": "flags/normal/sg-flag.gif",
-    "small_flag": "flags/small/tn_sg-flag.gif"
+    "small_flag": "flags/small/tn_sg-flag.gif",
+    "continent": "Africa"
   },
   "Serbia": {
     "capital": "Belgrade",
     "normal_flag": "flags/normal/ri-flag.gif",
-    "small_flag": "flags/small/tn_ri-flag.gif"
+    "small_flag": "flags/small/tn_ri-flag.gif",
+    "continent": "Europe"
   },
   "Seychelles": {
     "capital": "Victoria",
     "normal_flag": "flags/normal/se-flag.gif",
-    "small_flag": "flags/small/tn_se-flag.gif"
+    "small_flag": "flags/small/tn_se-flag.gif",
+    "continent": "Africa"
   },
   "Sierra Leone": {
     "capital": "Freetown",
     "normal_flag": "flags/normal/sl-flag.gif",
-    "small_flag": "flags/small/tn_sl-flag.gif"
+    "small_flag": "flags/small/tn_sl-flag.gif",
+    "continent": "Africa"
   },
   "Singapore": {
     "capital": "Singapore",
     "normal_flag": "flags/normal/sn-flag.gif",
-    "small_flag": "flags/small/tn_sn-flag.gif"
+    "small_flag": "flags/small/tn_sn-flag.gif",
+    "continent": "Asia"
   },
   "Slovakia": {
     "capital": "Bratislava",
     "normal_flag": "flags/normal/lo-flag.gif",
-    "small_flag": "flags/small/tn_lo-flag.gif"
+    "small_flag": "flags/small/tn_lo-flag.gif",
+    "continent": "Europe"
   },
   "Slovenia": {
     "capital": "Ljubljana",
     "normal_flag": "flags/normal/si-flag.gif",
-    "small_flag": "flags/small/tn_si-flag.gif"
+    "small_flag": "flags/small/tn_si-flag.gif",
+    "continent": "Europe"
   },
   "Solomon Islands": {
     "capital": "Honiara",
     "normal_flag": "flags/normal/bp-flag.gif",
-    "small_flag": "flags/small/tn_bp-flag.gif"
+    "small_flag": "flags/small/tn_bp-flag.gif",
+    "continent": "Oceania"
   },
   "Somalia": {
     "capital": "Mogadishu",
     "normal_flag": "flags/normal/so-flag.gif",
-    "small_flag": "flags/small/tn_so-flag.gif"
+    "small_flag": "flags/small/tn_so-flag.gif",
+    "continent": "Africa"
   },
   "South Africa": {
     "capital": "Pretoria",
     "normal_flag": "flags/normal/sf-flag.gif",
-    "small_flag": "flags/small/tn_sf-flag.gif"
+    "small_flag": "flags/small/tn_sf-flag.gif",
+    "continent": "Africa"
   },
   "South Korea": {
     "capital": "Seoul",
     "normal_flag": "flags/normal/ks-flag.gif",
-    "small_flag": "flags/small/tn_ks-flag.gif"
+    "small_flag": "flags/small/tn_ks-flag.gif",
+    "continent": "Asia"
   },
   "South Sudan": {
     "capital": "Juba",
     "normal_flag": "flags/normal/od-flag.gif",
-    "small_flag": "flags/small/tn_od-flag.gif"
+    "small_flag": "flags/small/tn_od-flag.gif",
+    "continent": "Africa"
   },
   "Spain": {
     "capital": "Madrid",
     "normal_flag": "flags/normal/sp-flag.gif",
-    "small_flag": "flags/small/tn_sp-flag.gif"
+    "small_flag": "flags/small/tn_sp-flag.gif",
+    "continent": "Europe"
   },
   "Sri Lanka": {
     "capital": "Sri Jayawardenepura Kotte",
     "normal_flag": "flags/normal/ce-flag.gif",
-    "small_flag": "flags/small/tn_ce-flag.gif"
+    "small_flag": "flags/small/tn_ce-flag.gif",
+    "continent": "Asia"
   },
-  "St. Vincent &Grenadines": {
+  "St. Vincent & Grenadines": {
     "capital": "Kingstown",
     "normal_flag": "flags/normal/vc-flag.gif",
-    "small_flag": "flags/small/tn_vc-flag.gif"
+    "small_flag": "flags/small/tn_vc-flag.gif",
+    "continent": "North America"
   },
   "State of Palestine": {
     "capital": "Ramallah",
     "normal_flag": "flags/normal/palestine-flag.gif",
-    "small_flag": "flags/small/tn_palestine-flag.gif"
+    "small_flag": "flags/small/tn_palestine-flag.gif",
+    "continent": "Asia"
   },
   "Sudan": {
     "capital": "Khartoum",
     "normal_flag": "flags/normal/su-flag.gif",
-    "small_flag": "flags/small/tn_su-flag.gif"
+    "small_flag": "flags/small/tn_su-flag.gif",
+    "continent": "Africa"
   },
   "Suriname": {
     "capital": "Paramaribo",
     "normal_flag": "flags/normal/ns-flag.gif",
-    "small_flag": "flags/small/tn_ns-flag.gif"
+    "small_flag": "flags/small/tn_ns-flag.gif",
+    "continent": "South America"
   },
   "Sweden": {
     "capital": "Stockholm",
     "normal_flag": "flags/normal/sw-flag.gif",
-    "small_flag": "flags/small/tn_sw-flag.gif"
+    "small_flag": "flags/small/tn_sw-flag.gif",
+    "continent": "Europe"
   },
   "Switzerland": {
     "capital": "Bern",
     "normal_flag": "flags/normal/sz-flag.gif",
-    "small_flag": "flags/small/tn_sz-flag.gif"
+    "small_flag": "flags/small/tn_sz-flag.gif",
+    "continent": "Europe"
   },
   "Syria": {
     "capital": "Damascus",
     "normal_flag": "flags/normal/sy-flag.png",
-    "small_flag": "flags/small/tn_sy-flag.png"
+    "small_flag": "flags/small/tn_sy-flag.png",
+    "continent": "Asia"
   },
   "Tajikistan": {
     "capital": "Dushanbe",
     "normal_flag": "flags/normal/ti-flag.gif",
-    "small_flag": "flags/small/tn_ti-flag.gif"
+    "small_flag": "flags/small/tn_ti-flag.gif",
+    "continent": "Asia"
   },
   "Tanzania": {
     "capital": "Dodoma",
     "normal_flag": "flags/normal/tz-flag.gif",
-    "small_flag": "flags/small/tn_tz-flag.gif"
+    "small_flag": "flags/small/tn_tz-flag.gif",
+    "continent": "Africa"
   },
   "Thailand": {
     "capital": "Bangkok",
     "normal_flag": "flags/normal/th-flag.gif",
-    "small_flag": "flags/small/tn_th-flag.gif"
+    "small_flag": "flags/small/tn_th-flag.gif",
+    "continent": "Asia"
   },
   "Timor-Leste": {
     "capital": "Dili",
     "normal_flag": "flags/normal/tt-flag.gif",
-    "small_flag": "flags/small/tn_tt-flag.gif"
+    "small_flag": "flags/small/tn_tt-flag.gif",
+    "continent": "Asia"
   },
   "Togo": {
     "capital": "Lomé",
     "normal_flag": "flags/normal/to-flag.gif",
-    "small_flag": "flags/small/tn_to-flag.gif"
+    "small_flag": "flags/small/tn_to-flag.gif",
+    "continent": "Africa"
   },
   "Tonga": {
     "capital": "Nuku'alofa",
     "normal_flag": "flags/normal/tn-flag.gif",
-    "small_flag": "flags/small/tn_tn-flag.gif"
+    "small_flag": "flags/small/tn_tn-flag.gif",
+    "continent": "Oceania"
   },
   "Trinidad and Tobago": {
     "capital": "Port of Spain",
     "normal_flag": "flags/normal/td-flag.gif",
-    "small_flag": "flags/small/tn_td-flag.gif"
+    "small_flag": "flags/small/tn_td-flag.gif",
+    "continent": "North America"
   },
   "Tunisia": {
     "capital": "Tunis",
     "normal_flag": "flags/normal/ts-flag.gif",
-    "small_flag": "flags/small/tn_ts-flag.gif"
+    "small_flag": "flags/small/tn_ts-flag.gif",
+    "continent": "Africa"
   },
   "Turkey": {
     "capital": "Ankara",
     "normal_flag": "flags/normal/tu-flag.gif",
-    "small_flag": "flags/small/tn_tu-flag.gif"
+    "small_flag": "flags/small/tn_tu-flag.gif",
+    "continent": "Asia"
   },
   "Turkmenistan": {
     "capital": "Ashgabat",
     "normal_flag": "flags/normal/tx-flag.gif",
-    "small_flag": "flags/small/tn_tx-flag.gif"
+    "small_flag": "flags/small/tn_tx-flag.gif",
+    "continent": "Asia"
   },
   "Tuvalu": {
     "capital": "Funafuti",
     "normal_flag": "flags/normal/tv-flag.gif",
-    "small_flag": "flags/small/tn_tv-flag.gif"
+    "small_flag": "flags/small/tn_tv-flag.gif",
+    "continent": "Oceania"
   },
   "Uganda": {
     "capital": "Kampala",
     "normal_flag": "flags/normal/ug-flag.gif",
-    "small_flag": "flags/small/tn_ug-flag.gif"
+    "small_flag": "flags/small/tn_ug-flag.gif",
+    "continent": "Africa"
   },
   "Ukraine": {
     "capital": "Kyiv",
     "normal_flag": "flags/normal/up-flag.png",
-    "small_flag": "flags/small/tn_up-flag.png"
+    "small_flag": "flags/small/tn_up-flag.png",
+    "continent": "Europe"
   },
   "United Arab Emirates": {
     "capital": "Abu Dhabi",
     "normal_flag": "flags/normal/ae-flag.gif",
-    "small_flag": "flags/small/tn_ae-flag.gif"
+    "small_flag": "flags/small/tn_ae-flag.gif",
+    "continent": "Asia"
   },
   "United Kingdom": {
     "capital": "London",
     "normal_flag": "flags/normal/uk-flag.gif",
-    "small_flag": "flags/small/tn_uk-flag.gif"
+    "small_flag": "flags/small/tn_uk-flag.gif",
+    "continent": "Europe"
   },
   "United States": {
     "capital": "Washington, D.C.",
     "normal_flag": "flags/normal/us-flag.gif",
-    "small_flag": "flags/small/tn_us-flag.gif"
+    "small_flag": "flags/small/tn_us-flag.gif",
+    "continent": "North America"
   },
   "Uruguay": {
     "capital": "Montevideo",
     "normal_flag": "flags/normal/uy-flag.gif",
-    "small_flag": "flags/small/tn_uy-flag.gif"
+    "small_flag": "flags/small/tn_uy-flag.gif",
+    "continent": "South America"
   },
   "Uzbekistan": {
     "capital": "Tashkent",
     "normal_flag": "flags/normal/uz-flag.gif",
-    "small_flag": "flags/small/tn_uz-flag.gif"
+    "small_flag": "flags/small/tn_uz-flag.gif",
+    "continent": "Asia"
   },
   "Vanuatu": {
     "capital": "Port Vila",
     "normal_flag": "flags/normal/nh-flag.gif",
-    "small_flag": "flags/small/tn_nh-flag.gif"
+    "small_flag": "flags/small/tn_nh-flag.gif",
+    "continent": "Oceania"
   },
   "Venezuela": {
     "capital": "Caracas",
     "normal_flag": "flags/normal/ve-flag.gif",
-    "small_flag": "flags/small/tn_ve-flag.gif"
+    "small_flag": "flags/small/tn_ve-flag.gif",
+    "continent": "South America"
   },
   "Vietnam": {
     "capital": "Hanoi",
     "normal_flag": "flags/normal/vm-flag.gif",
-    "small_flag": "flags/small/tn_vm-flag.gif"
+    "small_flag": "flags/small/tn_vm-flag.gif",
+    "continent": "Asia"
   },
   "Yemen": {
     "capital": "Sana'a",
     "normal_flag": "flags/normal/ym-flag.gif",
-    "small_flag": "flags/small/tn_ym-flag.gif"
+    "small_flag": "flags/small/tn_ym-flag.gif",
+    "continent": "Asia"
   },
   "Zambia": {
     "capital": "Lusaka",
     "normal_flag": "flags/normal/za-flag.gif",
-    "small_flag": "flags/small/tn_za-flag.gif"
+    "small_flag": "flags/small/tn_za-flag.gif",
+    "continent": "Africa"
   },
   "Zimbabwe": {
     "capital": "Harare",
     "normal_flag": "flags/normal/zi-flag.gif",
-    "small_flag": "flags/small/tn_zi-flag.gif"
+    "small_flag": "flags/small/tn_zi-flag.gif",
+    "continent": "Africa"
   }
 }
