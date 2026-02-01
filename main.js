@@ -1,5 +1,5 @@
 (() => {
-  const SHOW_SETTINGS_PANEL = false;
+  const SHOW_SETTINGS_PANEL = false; 
   const $ = (sel) => document.querySelector(sel);
   function normalizeAnswer(s) {
     return (s ?? "")
@@ -55,9 +55,12 @@
   const manifestInput = $("#manifestInput");
   const btnUsePasted = $("#btnUsePasted");
   const btnClearLocal = $("#btnClearLocal");
+  const continentFilter = $("#continentFilter");
   // State
   const state = {
-    items: [], // {country, capital, normal_flag, small_flag}
+    allItems: [], // unfiltered master list
+    items: [], // {country, capital, normal_flag, small_flag, continent} - filtered by continent
+    selectedContinent: "All", // current filter
     score: 0,
     streak: 0,
     progress: 0,
@@ -95,11 +98,13 @@
       const capital = (obj.capital ?? "").toString().trim() || "UnknownCapital";
       const normal_flag = ensureLeadingSlash((obj.normal_flag ?? "").toString().trim());
       const small_flag = ensureLeadingSlash((obj.small_flag ?? "").toString().trim());
+      const continent = (obj.continent ?? "").toString().trim() || "Unknown";
       out.push({
         country: country.trim(),
         capital,
         normal_flag,
         small_flag,
+        continent,
       });
     }
     const dedup = uniqBy(out, x => normalizeAnswer(x.country));
@@ -119,16 +124,79 @@
   }
   function setItemsFromManifestObject(data) {
     const items = parseManifestObject(data);
-    state.items = items;
-    const missing = items.filter(it => !bestFlagPath(it)).length;
-    if (items.length && missing) {
-      elDataWarning.style.display = "block";
-      elDataWarning.textContent = `Warning: ${missing} entries have no flag paths (normal_flag/small_flag missing).`;
+    state.allItems = items;
+
+    // Update dropdown with country counts
+    updateContinentDropdownCounts();
+
+    // Apply current continent filter
+    applyContintentFilter(state.selectedContinent);
+
+    const missing = state.items.filter(it => !bestFlagPath(it)).length;
+    if (state.items.length && missing) {
+      const existingText = elDataWarning.textContent;
+      const warningText = `Warning: ${missing} entries have no flag paths.`;
+      if (existingText && existingText.includes("Showing")) {
+        elDataWarning.textContent = existingText + " " + warningText;
+      } else {
+        elDataWarning.style.display = "block";
+        elDataWarning.textContent = warningText;
+      }
+    }
+    // Note: applyContintentFilter already updated elDataWarning
+
+    return state.items.length;
+  }
+  function applyContintentFilter(continent) {
+    state.selectedContinent = continent;
+
+    if (continent === "All") {
+      state.items = [...state.allItems];
     } else {
+      state.items = state.allItems.filter(item => item.continent === continent);
+    }
+
+    // Save preference to localStorage
+    localStorage.setItem("selectedContinent", continent);
+
+    // Update UI to show count
+    const count = state.items.length;
+    const total = state.allItems.length;
+
+    if (count === 0) {
+      elDataWarning.style.display = "block";
+      elDataWarning.textContent = `⚠️ No countries found for ${continent}.`;
+      return false;
+    } else if (continent === "All") {
       elDataWarning.style.display = "none";
       elDataWarning.textContent = "";
+    } else {
+      elDataWarning.style.display = "block";
+      elDataWarning.textContent = `ℹ️ Showing ${count} of ${total} countries (${continent} only).`;
     }
-    return items.length;
+    return true;
+  }
+  function updateContinentDropdownCounts() {
+    if (!continentFilter || !state.allItems.length) return;
+
+    // Count countries per continent
+    const counts = {};
+    for (const item of state.allItems) {
+      const continent = item.continent || "Unknown";
+      counts[continent] = (counts[continent] || 0) + 1;
+    }
+
+    // Update dropdown options
+    const options = continentFilter.querySelectorAll("option");
+    options.forEach(option => {
+      const continent = option.value;
+      if (continent === "All") {
+        option.textContent = `All Continents (${state.allItems.length})`;
+      } else {
+        const count = counts[continent] || 0;
+        option.textContent = `${continent} (${count})`;
+      }
+    });
   }
   function usePastedJson() {
     const raw = manifestInput.value.trim();
@@ -245,7 +313,7 @@
             <div class=\"question\">Which country is this?</div>
             <div class=\"sub\">Type the country name and press <span class=\"kbd\">Enter</span>.</div>
             <div class=\"row\" style=\"margin-top: 10px;\">
-              <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"off\" />
+              <input id=\"answerInput\" type=\"text\" placeholder=\"Country name…\" autocomplete=\"on\" />
             </div>
             <div class=\"row\" style=\"margin-top: 10px;\">
               <button class=\"primary\" id=\"btnSubmit\">Submit</button>
@@ -423,11 +491,28 @@
   }
   async function init() {
     setHud();
+    // Restore continent filter preference
+    const savedContinent = localStorage.getItem("selectedContinent");
+    if (savedContinent) {
+      state.selectedContinent = savedContinent;
+      if (continentFilter) {
+        continentFilter.value = savedContinent;
+      }
+    }
     btnNext.addEventListener("click", nextQuestion);
     btnReset.addEventListener("click", resetGame);
     btnShuffle.addEventListener("click", () => {
       state.items = shuffle(state.items);
       showResult(true, "🔀 Shuffled question pool.");
+    });
+    continentFilter.addEventListener("change", (e) => {
+      const continent = e.target.value;
+      const hasItems = applyContintentFilter(continent);
+
+      if (hasItems) {
+        // Reset the game when filter changes
+        resetGame();
+      }
     });
     btnToggleSetup.addEventListener("click", toggleSetup);
     btnUsePasted.addEventListener("click", usePastedJson);

@@ -22,6 +22,20 @@
       <section class="card">
         <div class="content">
           <h2>Game</h2>
+          <div style="margin-bottom: 16px;">
+            <label for="continentFilter" class="smallNote" style="display: block; margin-bottom: 6px;">
+              Filter by continent:
+            </label>
+            <select id="continentFilter" style="width: 100%; padding: 10px 12px; border: 1px solid rgba(159,176,255,.2); background: rgba(0,0,0,.15); border-radius: 12px; color: var(--text); font: inherit; cursor: pointer; outline: none;">
+              <option value="All">All Continents</option>
+              <option value="Africa">Africa</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="North America">North America</option>
+              <option value="South America">South America</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
           <div class="prompt" id="prompt"></div>
           <div class="row" style="margin-top:12px;">
             <button class="primary" id="btnNext">Next</button>    
