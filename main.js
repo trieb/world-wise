@@ -66,6 +66,8 @@
     progress: 0,
     current: null,
     locked: false,
+    hintsShown: false, // track if hints were shown for current question
+    answerRevealed: false, // track if answer was revealed for current question
   };
   const MODES = [
     { id: 1, name: "Flag → Country" },
@@ -250,9 +252,17 @@
       state.locked = true;
       state.progress += 1;
       if (ok) {
-        state.score += 1;
-        state.streak += 1;
-        showResult(true, `✅ Correct! ${q.item.country} — ${q.item.capital}`);
+        // Only award points if hints/answer weren't used
+        if (!state.hintsShown && !state.answerRevealed) {
+          state.score += 1;
+          state.streak += 1;
+        } else {
+          state.streak = 0;
+        }
+        const msg = (state.hintsShown || state.answerRevealed)
+          ? `✅ Correct! ${q.item.country} — ${q.item.capital} (no points - hints used)`
+          : `✅ Correct! ${q.item.country} — ${q.item.capital}`;
+        showResult(true, msg);
       } else {
         state.streak = 0;
         showResult(false, `❌ Not quite. Correct: ${q.item.country} — ${q.item.capital}`);
@@ -287,9 +297,17 @@
         }
       });
       if (ok) {
-        state.score += 1;
-        state.streak += 1;
-        showResult(true, `✅ Correct! ${q.item.country} (Capital: ${q.item.capital}).`);
+        // Only award points if hints/answer weren't used
+        if (!state.hintsShown && !state.answerRevealed) {
+          state.score += 1;
+          state.streak += 1;
+        } else {
+          state.streak = 0;
+        }
+        const msg = (state.hintsShown || state.answerRevealed)
+          ? `✅ Correct! ${q.item.country} (Capital: ${q.item.capital}) (no points - hints used)`
+          : `✅ Correct! ${q.item.country} (Capital: ${q.item.capital}).`;
+        showResult(true, msg);
       } else {
         state.streak = 0;
         showResult(false, `❌ Nope. Correct flag: ${q.item.country} (Capital: ${q.item.capital}).`);
@@ -420,6 +438,9 @@
     const q = { mode, item, choices: null };
     if (mode.id === 2) q.choices = buildChoices(item, 4);
     state.current = q;
+    // Reset hint/answer flags for new question
+    state.hintsShown = false;
+    state.answerRevealed = false;
     renderQuestion(q);
   }
   function resetGame() {
@@ -427,6 +448,8 @@
     state.streak = 0;
     state.progress = 0;
     state.locked = false;
+    state.hintsShown = false;
+    state.answerRevealed = false;
     clearResult();
     setHud();
     nextQuestion();
@@ -463,9 +486,13 @@
     btnHelp.addEventListener("click", () => {
       //console.log("Help clicked");
       box.classList.toggle("show");
+      if (box.classList.contains("show")) {
+        state.hintsShown = true;
+      }
     });
     btnShowAnswer.addEventListener("click", () => {
         //console.log("Show Answer clicked");
+        state.answerRevealed = true;
         showResult(false, `ℹ️ Answer: ${item.country} — ${item.capital}`);
         setHud();
     });
